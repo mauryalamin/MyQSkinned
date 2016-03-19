@@ -1,0 +1,560 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AE98DD281C95A50D0000AC40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE98DD271C95A50D0000AC40 /* AppDelegate.swift */; };
+		AE98DD2D1C95A50D0000AC40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE98DD2B1C95A50D0000AC40 /* Main.storyboard */; };
+		AE98DD2F1C95A50D0000AC40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE98DD2E1C95A50D0000AC40 /* Assets.xcassets */; };
+		AE98DD321C95A50D0000AC40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE98DD301C95A50D0000AC40 /* LaunchScreen.storyboard */; };
+		AE98DD3D1C95A50D0000AC40 /* MyQSkinnedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE98DD3C1C95A50D0000AC40 /* MyQSkinnedTests.swift */; };
+		AE98DD481C95A5BA0000AC40 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE98DD471C95A5BA0000AC40 /* UIImageView.swift */; };
+		AE98DD4A1C95A6740000AC40 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE98DD491C95A6740000AC40 /* MenuItem.swift */; };
+		AE98DD4E1C95A7480000AC40 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE98DD4D1C95A7480000AC40 /* Menu.swift */; };
+		AE98DD611C95AACE0000AC40 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE98DD541C95AACE0000AC40 /* OpenSans-Bold.ttf */; };
+		AE98DD621C95AACE0000AC40 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE98DD551C95AACE0000AC40 /* OpenSans-BoldItalic.ttf */; };
+		AE98DD631C95AACE0000AC40 /* OpenSans-CondBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE98DD561C95AACE0000AC40 /* OpenSans-CondBold.ttf */; };
+		AE98DD641C95AACE0000AC40 /* OpenSans-CondLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE98DD571C95AACE0000AC40 /* OpenSans-CondLight.ttf */; };
+		AE98DD651C95AACE0000AC40 /* OpenSans-CondLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE98DD581C95AACE0000AC40 /* OpenSans-CondLightItalic.ttf */; };
+		AE98DD661C95AACE0000AC40 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE98DD591C95AACE0000AC40 /* OpenSans-ExtraBold.ttf */; };
+		AE98DD671C95AACE0000AC40 /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE98DD5A1C95AACE0000AC40 /* OpenSans-ExtraBoldItalic.ttf */; };
+		AE98DD681C95AACE0000AC40 /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE98DD5B1C95AACE0000AC40 /* OpenSans-Italic.ttf */; };
+		AE98DD691C95AACE0000AC40 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE98DD5C1C95AACE0000AC40 /* OpenSans-Light.ttf */; };
+		AE98DD6A1C95AACE0000AC40 /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE98DD5D1C95AACE0000AC40 /* OpenSans-LightItalic.ttf */; };
+		AE98DD6B1C95AACE0000AC40 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE98DD5E1C95AACE0000AC40 /* OpenSans-Regular.ttf */; };
+		AE98DD6C1C95AACE0000AC40 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE98DD5F1C95AACE0000AC40 /* OpenSans-Semibold.ttf */; };
+		AE98DD6D1C95AACE0000AC40 /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE98DD601C95AACE0000AC40 /* OpenSans-SemiboldItalic.ttf */; };
+		AE98DD791C95AB510000AC40 /* TitilliumWeb-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE98DD6E1C95AB510000AC40 /* TitilliumWeb-Black.ttf */; };
+		AE98DD7A1C95AB510000AC40 /* TitilliumWeb-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE98DD6F1C95AB510000AC40 /* TitilliumWeb-Bold.ttf */; };
+		AE98DD7B1C95AB510000AC40 /* TitilliumWeb-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE98DD701C95AB510000AC40 /* TitilliumWeb-BoldItalic.ttf */; };
+		AE98DD7C1C95AB510000AC40 /* TitilliumWeb-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE98DD711C95AB510000AC40 /* TitilliumWeb-ExtraLight.ttf */; };
+		AE98DD7D1C95AB510000AC40 /* TitilliumWeb-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE98DD721C95AB510000AC40 /* TitilliumWeb-ExtraLightItalic.ttf */; };
+		AE98DD7E1C95AB510000AC40 /* TitilliumWeb-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE98DD731C95AB510000AC40 /* TitilliumWeb-Italic.ttf */; };
+		AE98DD7F1C95AB510000AC40 /* TitilliumWeb-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE98DD741C95AB510000AC40 /* TitilliumWeb-Light.ttf */; };
+		AE98DD801C95AB510000AC40 /* TitilliumWeb-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE98DD751C95AB510000AC40 /* TitilliumWeb-LightItalic.ttf */; };
+		AE98DD811C95AB510000AC40 /* TitilliumWeb-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE98DD761C95AB510000AC40 /* TitilliumWeb-Regular.ttf */; };
+		AE98DD821C95AB510000AC40 /* TitilliumWeb-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE98DD771C95AB510000AC40 /* TitilliumWeb-SemiBold.ttf */; };
+		AE98DD831C95AB510000AC40 /* TitilliumWeb-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE98DD781C95AB510000AC40 /* TitilliumWeb-SemiBoldItalic.ttf */; };
+		AE98DD851C95ED180000AC40 /* Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE98DD841C95ED180000AC40 /* Launch.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AE98DD391C95A50D0000AC40 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE98DD1C1C95A50D0000AC40 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE98DD231C95A50D0000AC40;
+			remoteInfo = MyQSkinned;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AE98DD241C95A50D0000AC40 /* MyQSkinned.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyQSkinned.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE98DD271C95A50D0000AC40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AE98DD2C1C95A50D0000AC40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AE98DD2E1C95A50D0000AC40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AE98DD311C95A50D0000AC40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AE98DD331C95A50D0000AC40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE98DD381C95A50D0000AC40 /* MyQSkinnedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyQSkinnedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE98DD3C1C95A50D0000AC40 /* MyQSkinnedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyQSkinnedTests.swift; sourceTree = "<group>"; };
+		AE98DD3E1C95A50D0000AC40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE98DD471C95A5BA0000AC40 /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		AE98DD491C95A6740000AC40 /* MenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		AE98DD4D1C95A7480000AC40 /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		AE98DD541C95AACE0000AC40 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		AE98DD551C95AACE0000AC40 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		AE98DD561C95AACE0000AC40 /* OpenSans-CondBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-CondBold.ttf"; sourceTree = "<group>"; };
+		AE98DD571C95AACE0000AC40 /* OpenSans-CondLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-CondLight.ttf"; sourceTree = "<group>"; };
+		AE98DD581C95AACE0000AC40 /* OpenSans-CondLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-CondLightItalic.ttf"; sourceTree = "<group>"; };
+		AE98DD591C95AACE0000AC40 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		AE98DD5A1C95AACE0000AC40 /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		AE98DD5B1C95AACE0000AC40 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		AE98DD5C1C95AACE0000AC40 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		AE98DD5D1C95AACE0000AC40 /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		AE98DD5E1C95AACE0000AC40 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		AE98DD5F1C95AACE0000AC40 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
+		AE98DD601C95AACE0000AC40 /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
+		AE98DD6E1C95AB510000AC40 /* TitilliumWeb-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-Black.ttf"; sourceTree = "<group>"; };
+		AE98DD6F1C95AB510000AC40 /* TitilliumWeb-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-Bold.ttf"; sourceTree = "<group>"; };
+		AE98DD701C95AB510000AC40 /* TitilliumWeb-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-BoldItalic.ttf"; sourceTree = "<group>"; };
+		AE98DD711C95AB510000AC40 /* TitilliumWeb-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-ExtraLight.ttf"; sourceTree = "<group>"; };
+		AE98DD721C95AB510000AC40 /* TitilliumWeb-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		AE98DD731C95AB510000AC40 /* TitilliumWeb-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-Italic.ttf"; sourceTree = "<group>"; };
+		AE98DD741C95AB510000AC40 /* TitilliumWeb-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-Light.ttf"; sourceTree = "<group>"; };
+		AE98DD751C95AB510000AC40 /* TitilliumWeb-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-LightItalic.ttf"; sourceTree = "<group>"; };
+		AE98DD761C95AB510000AC40 /* TitilliumWeb-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-Regular.ttf"; sourceTree = "<group>"; };
+		AE98DD771C95AB510000AC40 /* TitilliumWeb-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-SemiBold.ttf"; sourceTree = "<group>"; };
+		AE98DD781C95AB510000AC40 /* TitilliumWeb-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		AE98DD841C95ED180000AC40 /* Launch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Launch.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AE98DD211C95A50D0000AC40 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE98DD351C95A50D0000AC40 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AE98DD1B1C95A50D0000AC40 = {
+			isa = PBXGroup;
+			children = (
+				AE98DD261C95A50D0000AC40 /* MyQSkinned */,
+				AE98DD3B1C95A50D0000AC40 /* MyQSkinnedTests */,
+				AE98DD251C95A50D0000AC40 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AE98DD251C95A50D0000AC40 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AE98DD241C95A50D0000AC40 /* MyQSkinned.app */,
+				AE98DD381C95A50D0000AC40 /* MyQSkinnedTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AE98DD261C95A50D0000AC40 /* MyQSkinned */ = {
+			isa = PBXGroup;
+			children = (
+				AE98DD2B1C95A50D0000AC40 /* Main.storyboard */,
+				AE98DD4F1C95A7970000AC40 /* View Controllers */,
+				AE98DD2E1C95A50D0000AC40 /* Assets.xcassets */,
+				AE98DD511C95A8920000AC40 /* Custom Controls */,
+				AE98DD501C95A87A0000AC40 /* Helper Classes */,
+				AE98DD521C95A8A90000AC40 /* Supporting Files */,
+			);
+			path = MyQSkinned;
+			sourceTree = "<group>";
+		};
+		AE98DD3B1C95A50D0000AC40 /* MyQSkinnedTests */ = {
+			isa = PBXGroup;
+			children = (
+				AE98DD3C1C95A50D0000AC40 /* MyQSkinnedTests.swift */,
+				AE98DD3E1C95A50D0000AC40 /* Info.plist */,
+			);
+			path = MyQSkinnedTests;
+			sourceTree = "<group>";
+		};
+		AE98DD4F1C95A7970000AC40 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AE98DD841C95ED180000AC40 /* Launch.swift */,
+				AE98DD4D1C95A7480000AC40 /* Menu.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		AE98DD501C95A87A0000AC40 /* Helper Classes */ = {
+			isa = PBXGroup;
+			children = (
+				AE98DD471C95A5BA0000AC40 /* UIImageView.swift */,
+			);
+			name = "Helper Classes";
+			sourceTree = "<group>";
+		};
+		AE98DD511C95A8920000AC40 /* Custom Controls */ = {
+			isa = PBXGroup;
+			children = (
+				AE98DD491C95A6740000AC40 /* MenuItem.swift */,
+			);
+			name = "Custom Controls";
+			sourceTree = "<group>";
+		};
+		AE98DD521C95A8A90000AC40 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AE98DD531C95AA920000AC40 /* Fonts */,
+				AE98DD271C95A50D0000AC40 /* AppDelegate.swift */,
+				AE98DD301C95A50D0000AC40 /* LaunchScreen.storyboard */,
+				AE98DD331C95A50D0000AC40 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AE98DD531C95AA920000AC40 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AE98DD541C95AACE0000AC40 /* OpenSans-Bold.ttf */,
+				AE98DD551C95AACE0000AC40 /* OpenSans-BoldItalic.ttf */,
+				AE98DD561C95AACE0000AC40 /* OpenSans-CondBold.ttf */,
+				AE98DD571C95AACE0000AC40 /* OpenSans-CondLight.ttf */,
+				AE98DD581C95AACE0000AC40 /* OpenSans-CondLightItalic.ttf */,
+				AE98DD591C95AACE0000AC40 /* OpenSans-ExtraBold.ttf */,
+				AE98DD5A1C95AACE0000AC40 /* OpenSans-ExtraBoldItalic.ttf */,
+				AE98DD5B1C95AACE0000AC40 /* OpenSans-Italic.ttf */,
+				AE98DD5C1C95AACE0000AC40 /* OpenSans-Light.ttf */,
+				AE98DD5D1C95AACE0000AC40 /* OpenSans-LightItalic.ttf */,
+				AE98DD5E1C95AACE0000AC40 /* OpenSans-Regular.ttf */,
+				AE98DD5F1C95AACE0000AC40 /* OpenSans-Semibold.ttf */,
+				AE98DD601C95AACE0000AC40 /* OpenSans-SemiboldItalic.ttf */,
+				AE98DD6E1C95AB510000AC40 /* TitilliumWeb-Black.ttf */,
+				AE98DD6F1C95AB510000AC40 /* TitilliumWeb-Bold.ttf */,
+				AE98DD701C95AB510000AC40 /* TitilliumWeb-BoldItalic.ttf */,
+				AE98DD711C95AB510000AC40 /* TitilliumWeb-ExtraLight.ttf */,
+				AE98DD721C95AB510000AC40 /* TitilliumWeb-ExtraLightItalic.ttf */,
+				AE98DD731C95AB510000AC40 /* TitilliumWeb-Italic.ttf */,
+				AE98DD741C95AB510000AC40 /* TitilliumWeb-Light.ttf */,
+				AE98DD751C95AB510000AC40 /* TitilliumWeb-LightItalic.ttf */,
+				AE98DD761C95AB510000AC40 /* TitilliumWeb-Regular.ttf */,
+				AE98DD771C95AB510000AC40 /* TitilliumWeb-SemiBold.ttf */,
+				AE98DD781C95AB510000AC40 /* TitilliumWeb-SemiBoldItalic.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AE98DD231C95A50D0000AC40 /* MyQSkinned */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE98DD411C95A50D0000AC40 /* Build configuration list for PBXNativeTarget "MyQSkinned" */;
+			buildPhases = (
+				AE98DD201C95A50D0000AC40 /* Sources */,
+				AE98DD211C95A50D0000AC40 /* Frameworks */,
+				AE98DD221C95A50D0000AC40 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyQSkinned;
+			productName = MyQSkinned;
+			productReference = AE98DD241C95A50D0000AC40 /* MyQSkinned.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AE98DD371C95A50D0000AC40 /* MyQSkinnedTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE98DD441C95A50D0000AC40 /* Build configuration list for PBXNativeTarget "MyQSkinnedTests" */;
+			buildPhases = (
+				AE98DD341C95A50D0000AC40 /* Sources */,
+				AE98DD351C95A50D0000AC40 /* Frameworks */,
+				AE98DD361C95A50D0000AC40 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AE98DD3A1C95A50D0000AC40 /* PBXTargetDependency */,
+			);
+			name = MyQSkinnedTests;
+			productName = MyQSkinnedTests;
+			productReference = AE98DD381C95A50D0000AC40 /* MyQSkinnedTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AE98DD1C1C95A50D0000AC40 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Alamin;
+				TargetAttributes = {
+					AE98DD231C95A50D0000AC40 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 7Y457JX2Z3;
+					};
+					AE98DD371C95A50D0000AC40 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = AE98DD231C95A50D0000AC40;
+					};
+				};
+			};
+			buildConfigurationList = AE98DD1F1C95A50D0000AC40 /* Build configuration list for PBXProject "MyQSkinned" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AE98DD1B1C95A50D0000AC40;
+			productRefGroup = AE98DD251C95A50D0000AC40 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AE98DD231C95A50D0000AC40 /* MyQSkinned */,
+				AE98DD371C95A50D0000AC40 /* MyQSkinnedTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AE98DD221C95A50D0000AC40 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE98DD7A1C95AB510000AC40 /* TitilliumWeb-Bold.ttf in Resources */,
+				AE98DD6D1C95AACE0000AC40 /* OpenSans-SemiboldItalic.ttf in Resources */,
+				AE98DD321C95A50D0000AC40 /* LaunchScreen.storyboard in Resources */,
+				AE98DD681C95AACE0000AC40 /* OpenSans-Italic.ttf in Resources */,
+				AE98DD2F1C95A50D0000AC40 /* Assets.xcassets in Resources */,
+				AE98DD661C95AACE0000AC40 /* OpenSans-ExtraBold.ttf in Resources */,
+				AE98DD641C95AACE0000AC40 /* OpenSans-CondLight.ttf in Resources */,
+				AE98DD611C95AACE0000AC40 /* OpenSans-Bold.ttf in Resources */,
+				AE98DD691C95AACE0000AC40 /* OpenSans-Light.ttf in Resources */,
+				AE98DD2D1C95A50D0000AC40 /* Main.storyboard in Resources */,
+				AE98DD811C95AB510000AC40 /* TitilliumWeb-Regular.ttf in Resources */,
+				AE98DD631C95AACE0000AC40 /* OpenSans-CondBold.ttf in Resources */,
+				AE98DD7C1C95AB510000AC40 /* TitilliumWeb-ExtraLight.ttf in Resources */,
+				AE98DD6C1C95AACE0000AC40 /* OpenSans-Semibold.ttf in Resources */,
+				AE98DD7D1C95AB510000AC40 /* TitilliumWeb-ExtraLightItalic.ttf in Resources */,
+				AE98DD831C95AB510000AC40 /* TitilliumWeb-SemiBoldItalic.ttf in Resources */,
+				AE98DD671C95AACE0000AC40 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				AE98DD6B1C95AACE0000AC40 /* OpenSans-Regular.ttf in Resources */,
+				AE98DD7F1C95AB510000AC40 /* TitilliumWeb-Light.ttf in Resources */,
+				AE98DD651C95AACE0000AC40 /* OpenSans-CondLightItalic.ttf in Resources */,
+				AE98DD7E1C95AB510000AC40 /* TitilliumWeb-Italic.ttf in Resources */,
+				AE98DD6A1C95AACE0000AC40 /* OpenSans-LightItalic.ttf in Resources */,
+				AE98DD791C95AB510000AC40 /* TitilliumWeb-Black.ttf in Resources */,
+				AE98DD621C95AACE0000AC40 /* OpenSans-BoldItalic.ttf in Resources */,
+				AE98DD801C95AB510000AC40 /* TitilliumWeb-LightItalic.ttf in Resources */,
+				AE98DD821C95AB510000AC40 /* TitilliumWeb-SemiBold.ttf in Resources */,
+				AE98DD7B1C95AB510000AC40 /* TitilliumWeb-BoldItalic.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE98DD361C95A50D0000AC40 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AE98DD201C95A50D0000AC40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE98DD4A1C95A6740000AC40 /* MenuItem.swift in Sources */,
+				AE98DD481C95A5BA0000AC40 /* UIImageView.swift in Sources */,
+				AE98DD281C95A50D0000AC40 /* AppDelegate.swift in Sources */,
+				AE98DD851C95ED180000AC40 /* Launch.swift in Sources */,
+				AE98DD4E1C95A7480000AC40 /* Menu.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE98DD341C95A50D0000AC40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE98DD3D1C95A50D0000AC40 /* MyQSkinnedTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AE98DD3A1C95A50D0000AC40 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE98DD231C95A50D0000AC40 /* MyQSkinned */;
+			targetProxy = AE98DD391C95A50D0000AC40 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AE98DD2B1C95A50D0000AC40 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE98DD2C1C95A50D0000AC40 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AE98DD301C95A50D0000AC40 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE98DD311C95A50D0000AC40 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AE98DD3F1C95A50D0000AC40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AE98DD401C95A50D0000AC40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AE98DD421C95A50D0000AC40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = MyQSkinned/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alamin.MyQSkinned;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		AE98DD431C95A50D0000AC40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = MyQSkinned/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alamin.MyQSkinned;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		AE98DD451C95A50D0000AC40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MyQSkinnedTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alamin.MyQSkinnedTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyQSkinned.app/MyQSkinned";
+			};
+			name = Debug;
+		};
+		AE98DD461C95A50D0000AC40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MyQSkinnedTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alamin.MyQSkinnedTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyQSkinned.app/MyQSkinned";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AE98DD1F1C95A50D0000AC40 /* Build configuration list for PBXProject "MyQSkinned" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE98DD3F1C95A50D0000AC40 /* Debug */,
+				AE98DD401C95A50D0000AC40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE98DD411C95A50D0000AC40 /* Build configuration list for PBXNativeTarget "MyQSkinned" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE98DD421C95A50D0000AC40 /* Debug */,
+				AE98DD431C95A50D0000AC40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE98DD441C95A50D0000AC40 /* Build configuration list for PBXNativeTarget "MyQSkinnedTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE98DD451C95A50D0000AC40 /* Debug */,
+				AE98DD461C95A50D0000AC40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AE98DD1C1C95A50D0000AC40 /* Project object */;
+}
