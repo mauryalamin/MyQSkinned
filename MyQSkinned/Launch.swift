@@ -35,9 +35,15 @@ class Launch: UIViewController, UITextFieldDelegate {
         
         // Do any additional setup after loading the view.
         
+        hideKeyboardWhenTappedAround()
+        
         textFields = [email, password]
-        email.delegate = self
-        password.delegate = self
+        
+        for field in textFields {
+            
+            field.delegate = self
+            
+        }
         
         addParallaxToView(brandLogo)
         addParallaxToView(myqLogo)
@@ -79,11 +85,6 @@ class Launch: UIViewController, UITextFieldDelegate {
         
         return true
         
-    }
-    
-    // Touch anywhere to dismiss keyboard
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        self.view.endEditing(true)
     }
     
     // MARK: - Parallax Effect
@@ -132,15 +133,21 @@ class Launch: UIViewController, UITextFieldDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    /*
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
-    }
-    */
-    
+        
 }
+
+// http://stackoverflow.com/questions/24126678/close-ios-keyboard-by-touching-anywhere-using-swift
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}
+
+
+
