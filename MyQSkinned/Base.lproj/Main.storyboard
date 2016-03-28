@@ -9,8 +9,10 @@
     <customFonts key="customFonts">
         <mutableArray key="OpenSans-Light.ttf">
             <string>OpenSans-Light</string>
+            <string>OpenSans-Light</string>
         </mutableArray>
         <mutableArray key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
             <string>OpenSans</string>
             <string>OpenSans</string>
             <string>OpenSans</string>
@@ -166,6 +168,9 @@
                                 <state key="normal" title="Learn more about MyQ">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="A34-pl-IOM" kind="presentation" id="SZX-lm-4gq"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -250,7 +255,7 @@
                                         <rect key="frame" x="75" y="34" width="450" height="25"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
                                                 <color key="value" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -268,7 +273,7 @@
                                         <rect key="frame" x="75" y="82" width="450" height="25"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
                                                 <color key="value" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -627,6 +632,126 @@
             </objects>
             <point key="canvasLocation" x="1768" y="420"/>
         </scene>
+        <!--Onboard Single View-->
+        <scene sceneID="hWx-rk-7Bt">
+            <objects>
+                <viewController storyboardIdentifier="OnboardSingleView" id="aHk-v2-sNr" customClass="OnboardSingleView" customModule="MyQSkinned" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gcg-If-ymA"/>
+                        <viewControllerLayoutGuide type="bottom" id="0Ah-st-m1p"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GKD-6N-CCj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboard1" translatesAutoresizingMaskIntoConstraints="NO" id="4es-yV-YaV">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="myq-logo-ko" translatesAutoresizingMaskIntoConstraints="NO" id="lv5-zZ-qPh">
+                                <rect key="frame" x="254" y="59" width="92" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="92" id="8uL-xl-gkz"/>
+                                    <constraint firstAttribute="height" constant="49" id="s1A-oI-Aa4"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smarter is Better" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="joI-CT-95I">
+                                <rect key="frame" x="20" y="108" width="560" height="47"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="34"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="With MyQ, stay connected and control your home - from anywhere, at any time." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tHx-S9-5Nm">
+                                <rect key="frame" x="20" y="514" width="560" height="44"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lv5-zZ-qPh" firstAttribute="centerX" secondItem="GKD-6N-CCj" secondAttribute="centerX" id="1TG-UO-ayj"/>
+                            <constraint firstAttribute="trailing" secondItem="tHx-S9-5Nm" secondAttribute="trailing" constant="20" id="2V2-AQ-rGi"/>
+                            <constraint firstItem="joI-CT-95I" firstAttribute="leading" secondItem="GKD-6N-CCj" secondAttribute="leading" constant="20" id="GG5-uT-hOr"/>
+                            <constraint firstItem="0Ah-st-m1p" firstAttribute="top" secondItem="tHx-S9-5Nm" secondAttribute="bottom" constant="42" id="Qmb-GG-S17"/>
+                            <constraint firstItem="lv5-zZ-qPh" firstAttribute="centerY" secondItem="GKD-6N-CCj" secondAttribute="centerY" multiplier="0.28" id="T4S-FV-ZH3"/>
+                            <constraint firstItem="tHx-S9-5Nm" firstAttribute="leading" secondItem="GKD-6N-CCj" secondAttribute="leading" constant="20" id="TmE-FK-wHW"/>
+                            <constraint firstItem="joI-CT-95I" firstAttribute="centerX" secondItem="GKD-6N-CCj" secondAttribute="centerX" id="VGp-fp-oJu"/>
+                            <constraint firstAttribute="trailing" secondItem="4es-yV-YaV" secondAttribute="trailing" id="Z0X-ny-u6o"/>
+                            <constraint firstAttribute="trailing" secondItem="joI-CT-95I" secondAttribute="trailing" constant="20" id="Z7y-Vp-0RW"/>
+                            <constraint firstItem="joI-CT-95I" firstAttribute="top" secondItem="lv5-zZ-qPh" secondAttribute="bottom" id="ddL-Nj-HLt"/>
+                            <constraint firstItem="0Ah-st-m1p" firstAttribute="top" secondItem="4es-yV-YaV" secondAttribute="bottom" id="qPl-mK-fQP"/>
+                            <constraint firstItem="4es-yV-YaV" firstAttribute="leading" secondItem="GKD-6N-CCj" secondAttribute="leading" id="qyN-aw-DCZ"/>
+                            <constraint firstItem="tHx-S9-5Nm" firstAttribute="centerX" secondItem="GKD-6N-CCj" secondAttribute="centerX" id="vP5-Eb-U0V"/>
+                            <constraint firstItem="4es-yV-YaV" firstAttribute="top" secondItem="GKD-6N-CCj" secondAttribute="top" id="vn6-YI-IhJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="4es-yV-YaV" id="Rlg-nH-iP4"/>
+                        <outlet property="descriptionLabel" destination="tHx-S9-5Nm" id="hOw-tr-uPq"/>
+                        <outlet property="titleLabel" destination="joI-CT-95I" id="rhH-RR-pY7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LMz-dN-shO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-976" y="1227"/>
+        </scene>
+        <!--Onboard View-->
+        <scene sceneID="ybC-5d-rcn">
+            <objects>
+                <viewController id="A34-pl-IOM" customClass="OnboardView" customModule="MyQSkinned" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4II-2u-uXI"/>
+                        <viewControllerLayoutGuide type="bottom" id="4rT-vA-Qsj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uA0-UT-rDT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M2S-LO-mom">
+                                <rect key="frame" x="-10" y="0.0" width="620" height="600"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="A34-pl-IOM" id="yXB-se-X9L"/>
+                                </connections>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="M31-7o-48A">
+                                <rect key="frame" x="0.0" y="563" width="600" height="37"/>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oN0-VO-MyB">
+                                <rect key="frame" x="560" y="28" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="Zyo-qx-kgy"/>
+                                    <constraint firstAttribute="height" constant="30" id="nr1-Zv-5ff"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="closeButton"/>
+                                <connections>
+                                    <action selector="dismissView:" destination="A34-pl-IOM" eventType="touchUpInside" id="12c-CK-v5r"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4rT-vA-Qsj" firstAttribute="top" secondItem="M31-7o-48A" secondAttribute="bottom" id="KCA-rt-6fl"/>
+                            <constraint firstItem="M2S-LO-mom" firstAttribute="leading" secondItem="uA0-UT-rDT" secondAttribute="leading" constant="-10" id="RIO-nx-MAe"/>
+                            <constraint firstItem="M2S-LO-mom" firstAttribute="top" secondItem="uA0-UT-rDT" secondAttribute="top" id="RuC-Lt-JWi"/>
+                            <constraint firstItem="M31-7o-48A" firstAttribute="leading" secondItem="uA0-UT-rDT" secondAttribute="leading" id="TiT-eg-9De"/>
+                            <constraint firstAttribute="trailing" secondItem="M31-7o-48A" secondAttribute="trailing" id="Z5U-y7-dpB"/>
+                            <constraint firstItem="4rT-vA-Qsj" firstAttribute="top" secondItem="M2S-LO-mom" secondAttribute="bottom" id="etx-JV-Tbr"/>
+                            <constraint firstAttribute="trailing" secondItem="oN0-VO-MyB" secondAttribute="trailing" constant="10" id="jEE-Lv-w6b"/>
+                            <constraint firstItem="oN0-VO-MyB" firstAttribute="top" secondItem="4II-2u-uXI" secondAttribute="bottom" constant="8" id="vWV-jD-5aV"/>
+                            <constraint firstAttribute="trailing" secondItem="M2S-LO-mom" secondAttribute="trailing" constant="-10" id="wdy-dS-MzS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pageControl" destination="M31-7o-48A" id="Drz-WU-TRN"/>
+                        <outlet property="scrollView" destination="M2S-LO-mom" id="ohy-NK-uVH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CrV-2B-Z8Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-337" y="1227"/>
+        </scene>
         <!--Menu-->
         <scene sceneID="Vdj-GS-DYt">
             <objects>
@@ -733,7 +858,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AV7-D3-9xS" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="331" y="1085"/>
+            <point key="canvasLocation" x="294" y="1227"/>
         </scene>
     </scenes>
     <resources>
@@ -745,10 +870,12 @@
         <image name="checkUnselected" width="24" height="24"/>
         <image name="checkbox-selected" width="10" height="10"/>
         <image name="checkbox-unselected" width="10" height="10"/>
+        <image name="closeButton" width="30" height="30"/>
         <image name="help-icon" width="26" height="26"/>
         <image name="history-icon" width="26" height="26"/>
         <image name="manage-places" width="26" height="26"/>
         <image name="myq-logo-ko" width="64" height="34"/>
+        <image name="onboard1" width="320" height="568"/>
         <image name="place-icon" width="26" height="26"/>
         <image name="rules-icon" width="26" height="26"/>
     </resources>

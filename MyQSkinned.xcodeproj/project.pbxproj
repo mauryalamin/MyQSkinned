@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE0373861CA8635E00E38B81 /* OnboardSingleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0373851CA8635E00E38B81 /* OnboardSingleView.swift */; };
+		AE0373881CA8638600E38B81 /* OnboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0373871CA8638600E38B81 /* OnboardView.swift */; };
 		AE5721EA1CA6FC360081AD35 /* CreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5721E91CA6FC360081AD35 /* CreateAccount.swift */; };
 		AE5721EC1CA6FC4F0081AD35 /* VerifyAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5721EB1CA6FC4F0081AD35 /* VerifyAccount.swift */; };
 		AE98DD281C95A50D0000AC40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE98DD271C95A50D0000AC40 /* AppDelegate.swift */; };
@@ -55,6 +57,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AE0373851CA8635E00E38B81 /* OnboardSingleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardSingleView.swift; sourceTree = "<group>"; };
+		AE0373871CA8638600E38B81 /* OnboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardView.swift; sourceTree = "<group>"; };
 		AE5721E91CA6FC360081AD35 /* CreateAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccount.swift; sourceTree = "<group>"; };
 		AE5721EB1CA6FC4F0081AD35 /* VerifyAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyAccount.swift; sourceTree = "<group>"; };
 		AE98DD241C95A50D0000AC40 /* MyQSkinned.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyQSkinned.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -161,6 +165,8 @@
 				AE98DD4D1C95A7480000AC40 /* Menu.swift */,
 				AE5721E91CA6FC360081AD35 /* CreateAccount.swift */,
 				AE5721EB1CA6FC4F0081AD35 /* VerifyAccount.swift */,
+				AE0373871CA8638600E38B81 /* OnboardView.swift */,
+				AE0373851CA8635E00E38B81 /* OnboardSingleView.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -350,9 +356,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE98DD4A1C95A6740000AC40 /* MenuItem.swift in Sources */,
+				AE0373881CA8638600E38B81 /* OnboardView.swift in Sources */,
 				AE5721EA1CA6FC360081AD35 /* CreateAccount.swift in Sources */,
 				AE98DD481C95A5BA0000AC40 /* UIImageView.swift in Sources */,
 				AE5721EC1CA6FC4F0081AD35 /* VerifyAccount.swift in Sources */,
+				AE0373861CA8635E00E38B81 /* OnboardSingleView.swift in Sources */,
 				AE98DD281C95A50D0000AC40 /* AppDelegate.swift in Sources */,
 				AE98DD851C95ED180000AC40 /* Launch.swift in Sources */,
 				AE98DD4E1C95A7480000AC40 /* Menu.swift in Sources */,
