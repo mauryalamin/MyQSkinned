@@ -43,6 +43,54 @@
         </mutableArray>
     </customFonts>
     <scenes>
+        <!--Places View-->
+        <scene sceneID="dbE-iG-mKT">
+            <objects>
+                <viewController id="bmN-ay-IuL" customClass="PlacesView" customModule="MyQSkinned" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TUq-Ox-lje"/>
+                        <viewControllerLayoutGuide type="bottom" id="KRz-IQ-SpI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Byg-m8-enX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="places-wallpaper-sq" translatesAutoresizingMaskIntoConstraints="NO" id="z8l-fd-P5J">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ie-xi-ZDH">
+                                <rect key="frame" x="0.0" y="20" width="600" height="300"/>
+                            </scrollView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chamberlain-logo-ko" translatesAutoresizingMaskIntoConstraints="NO" id="JF4-BB-ALO">
+                                <rect key="frame" x="217" y="550" width="166" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="166" id="6nr-0W-G7D"/>
+                                    <constraint firstAttribute="height" constant="20" id="Lwe-Hy-Azy"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0ie-xi-ZDH" firstAttribute="height" secondItem="Byg-m8-enX" secondAttribute="height" multiplier="0.5" id="246-B0-A8G"/>
+                            <constraint firstItem="z8l-fd-P5J" firstAttribute="leading" secondItem="Byg-m8-enX" secondAttribute="leading" id="4gw-XG-BWV"/>
+                            <constraint firstItem="JF4-BB-ALO" firstAttribute="centerX" secondItem="Byg-m8-enX" secondAttribute="centerX" id="Al0-05-2dM"/>
+                            <constraint firstItem="KRz-IQ-SpI" firstAttribute="top" secondItem="JF4-BB-ALO" secondAttribute="bottom" constant="30" id="JmV-ly-er0"/>
+                            <constraint firstItem="0ie-xi-ZDH" firstAttribute="top" secondItem="TUq-Ox-lje" secondAttribute="bottom" id="LiR-dQ-N8F"/>
+                            <constraint firstAttribute="trailing" secondItem="0ie-xi-ZDH" secondAttribute="trailing" id="Y7A-fJ-0mu"/>
+                            <constraint firstItem="0ie-xi-ZDH" firstAttribute="leading" secondItem="Byg-m8-enX" secondAttribute="leading" id="sav-Pg-rW6"/>
+                            <constraint firstAttribute="trailing" secondItem="z8l-fd-P5J" secondAttribute="trailing" id="xiD-k8-QeV"/>
+                            <constraint firstItem="z8l-fd-P5J" firstAttribute="top" secondItem="Byg-m8-enX" secondAttribute="top" id="xwE-8j-a0i"/>
+                            <constraint firstItem="KRz-IQ-SpI" firstAttribute="top" secondItem="z8l-fd-P5J" secondAttribute="bottom" id="zEK-hm-qaS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="0ie-xi-ZDH" id="7ma-NA-87u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tmr-zW-l3c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-658" y="485"/>
+        </scene>
         <!--Launch-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -145,6 +193,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="23"/>
                                 <state key="normal" title="Login"/>
+                                <connections>
+                                    <segue destination="bmN-ay-IuL" kind="show" id="elT-iI-5sS"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4m-af-gzm">
                                 <rect key="frame" x="271" y="442" width="58" height="40"/>
@@ -877,6 +928,7 @@
         <image name="myq-logo-ko" width="64" height="34"/>
         <image name="onboard1" width="320" height="568"/>
         <image name="place-icon" width="26" height="26"/>
+        <image name="places-wallpaper-sq" width="470" height="568"/>
         <image name="rules-icon" width="26" height="26"/>
     </resources>
 </document>
