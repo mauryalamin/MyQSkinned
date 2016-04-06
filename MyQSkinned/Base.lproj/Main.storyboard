@@ -59,7 +59,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ie-xi-ZDH">
-                                <rect key="frame" x="0.0" y="20" width="600" height="300"/>
+                                <rect key="frame" x="0.0" y="20" width="600" height="450"/>
+                                <connections>
+                                    <outlet property="delegate" destination="bmN-ay-IuL" id="9iM-OL-Irj"/>
+                                </connections>
                             </scrollView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chamberlain-logo-ko" translatesAutoresizingMaskIntoConstraints="NO" id="JF4-BB-ALO">
                                 <rect key="frame" x="217" y="550" width="166" height="20"/>
@@ -68,22 +71,29 @@
                                     <constraint firstAttribute="height" constant="20" id="Lwe-Hy-Azy"/>
                                 </constraints>
                             </imageView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="qPn-Gz-PDC">
+                                <rect key="frame" x="0.5" y="505" width="600" height="37"/>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="0ie-xi-ZDH" firstAttribute="height" secondItem="Byg-m8-enX" secondAttribute="height" multiplier="0.5" id="246-B0-A8G"/>
+                            <constraint firstItem="0ie-xi-ZDH" firstAttribute="height" secondItem="Byg-m8-enX" secondAttribute="height" multiplier="0.75" id="246-B0-A8G"/>
+                            <constraint firstItem="JF4-BB-ALO" firstAttribute="top" secondItem="qPn-Gz-PDC" secondAttribute="bottom" constant="8" id="3Ta-KK-dlV"/>
                             <constraint firstItem="z8l-fd-P5J" firstAttribute="leading" secondItem="Byg-m8-enX" secondAttribute="leading" id="4gw-XG-BWV"/>
                             <constraint firstItem="JF4-BB-ALO" firstAttribute="centerX" secondItem="Byg-m8-enX" secondAttribute="centerX" id="Al0-05-2dM"/>
+                            <constraint firstItem="qPn-Gz-PDC" firstAttribute="width" secondItem="Byg-m8-enX" secondAttribute="width" id="Gf2-Mm-14C"/>
                             <constraint firstItem="KRz-IQ-SpI" firstAttribute="top" secondItem="JF4-BB-ALO" secondAttribute="bottom" constant="30" id="JmV-ly-er0"/>
                             <constraint firstItem="0ie-xi-ZDH" firstAttribute="top" secondItem="TUq-Ox-lje" secondAttribute="bottom" id="LiR-dQ-N8F"/>
                             <constraint firstAttribute="trailing" secondItem="0ie-xi-ZDH" secondAttribute="trailing" id="Y7A-fJ-0mu"/>
                             <constraint firstItem="0ie-xi-ZDH" firstAttribute="leading" secondItem="Byg-m8-enX" secondAttribute="leading" id="sav-Pg-rW6"/>
                             <constraint firstAttribute="trailing" secondItem="z8l-fd-P5J" secondAttribute="trailing" id="xiD-k8-QeV"/>
                             <constraint firstItem="z8l-fd-P5J" firstAttribute="top" secondItem="Byg-m8-enX" secondAttribute="top" id="xwE-8j-a0i"/>
+                            <constraint firstItem="qPn-Gz-PDC" firstAttribute="centerX" secondItem="Byg-m8-enX" secondAttribute="centerX" id="z1y-6m-7kr"/>
                             <constraint firstItem="KRz-IQ-SpI" firstAttribute="top" secondItem="z8l-fd-P5J" secondAttribute="bottom" id="zEK-hm-qaS"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="pageControl" destination="qPn-Gz-PDC" id="VgS-oz-X85"/>
                         <outlet property="scrollView" destination="0ie-xi-ZDH" id="7ma-NA-87u"/>
                     </connections>
                 </viewController>

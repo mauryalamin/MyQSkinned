@@ -11,9 +11,10 @@ import UIKit
 class PlacesView: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
-    private let deviceControl = DeviceControl()
+    @IBOutlet weak var pageControl: UIPageControl!
     
-    var devices = [DeviceControl]()
+    private let deviceControl = DeviceControl()
+    var devicesArray = [DeviceControl]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,16 +22,12 @@ class PlacesView: UIViewController {
         // Do any additional setup after loading the view.
         scrollView.pagingEnabled = true
         
-        let deviceControl1 = DeviceControl()
-        let deviceControl2 = DeviceControl()
-        let deviceControl3 = DeviceControl()
-        
+        // TO DO: After JSON file import, new method would loop through each JSON object and create device instances on the fly
+        let deviceControl1 = configureAndAddDevice("GDO", placeName: "LAKE HOME", deviceName: "Garage Door", deviceIcon: "gdo-closed")
+        let deviceControl2 = configureAndAddDevice("LIGHT", placeName: "MY HOME", deviceName: "Front Light", deviceIcon: "light-on")
+        let deviceControl3 = configureAndAddDevice("THERMOSTAT", placeName: "MY HOME", deviceName: "Thermostat", deviceIcon: "therm-home")
         
         let views = ["scrollView": scrollView, "deviceControl1": deviceControl1, "deviceControl2": deviceControl2, "deviceControl3": deviceControl3]
-        
-        scrollView.addSubview(deviceControl1)
-        scrollView.addSubview(deviceControl2)
-        scrollView.addSubview(deviceControl3)
         
         let verticalContraints = NSLayoutConstraint.constraintsWithVisualFormat("V:|[deviceControl1(==scrollView)]|", options: [], metrics: nil, views: views)
         NSLayoutConstraint.activateConstraints(verticalContraints)
@@ -38,17 +35,7 @@ class PlacesView: UIViewController {
         let horizontalConstraints = NSLayoutConstraint.constraintsWithVisualFormat("H:|[deviceControl1(==scrollView)][deviceControl2(==scrollView)][deviceControl3(==scrollView)]|", options: [.AlignAllTop, .AlignAllBottom], metrics: nil, views: views)
         NSLayoutConstraint.activateConstraints(horizontalConstraints)
         
-        // view.addSubview(deviceControl)
         
-        /*
-        NSLayoutConstraint.activateConstraints([
-            
-            deviceControl.widthAnchor.constraintEqualToAnchor(scrollView.widthAnchor),
-            deviceControl.topAnchor.constraintEqualToAnchor(scrollView.topAnchor),
-            deviceControl.centerXAnchor.constraintEqualToAnchor(scrollView.centerXAnchor),
-            // deviceControl.centerYAnchor.constraintEqualToAnchor(view.centerYAnchor)
-            ])*/
- 
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,14 +44,49 @@ class PlacesView: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    private func configureAndAddDevice(type: String, placeName: String, deviceName: String, deviceIcon: String) -> DeviceControl {
+        
+        let deviceControl = DeviceControl()
+        
+        deviceControl.translatesAutoresizingMaskIntoConstraints = false
+        
+        deviceControl.placeText = placeName
+        deviceControl.deviceText = deviceName
+        deviceControl.deviceIconImage = UIImage(named: deviceIcon)
+        deviceControl.statusText = "OPEN FOR 13 MINUTES"
+        
+        devicesArray.append(deviceControl)
+        
+        scrollView.addSubview(deviceControl)
+        
+        return deviceControl
+        
     }
-    */
-
+    
+    
 }
+
+
+extension PlacesView: UIScrollViewDelegate {
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        let pageWidth = CGRectGetWidth(scrollView.bounds)
+        let pageFraction = scrollView.contentOffset.x / pageWidth
+        
+        pageControl.currentPage = Int(round(pageFraction))
+        
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+

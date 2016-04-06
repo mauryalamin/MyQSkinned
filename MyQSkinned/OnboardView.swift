@@ -81,7 +81,6 @@ extension OnboardView: UIScrollViewDelegate {
         
         pageControl.currentPage = Int(round(pageFraction))
         
-        // print("\(pageWidth), \(pageFraction)")
     }
     
 }

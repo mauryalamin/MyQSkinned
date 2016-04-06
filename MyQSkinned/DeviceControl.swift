@@ -10,9 +10,7 @@ import UIKit
 
 class DeviceControl: UIView {
     
-    private let deviceImageView = UIImageView.configuredImageView(withImageNamed: "gdo-closed")
-    
-    
+    private let deviceImageView = UIImageView.configuredImageView()
     
     // Create and configure Place Name label
     var placeNameLabel : UILabel = {
@@ -63,19 +61,6 @@ class DeviceControl: UIView {
     // 5
     private func prepareView() {
         
-        // backgroundColor = .orangeColor()
-        
-        // Set label color
-        
-        
-        placeNameLabel.text = "MY HOME"
-        deviceNameLabel.text = "Garage Door"
-        statusLabel.text = "CLOSED FOR 2 MINUTES"
-        
-        deviceControlArea.backgroundColor = UIColor.blueColor()
-        // deviceImageView.backgroundColor = UIColor.blueColor()
-        
-        // addSubview(deviceControlArea)
         addSubview(placeNameLabel)
         addSubview(deviceNameLabel)
         addSubview(deviceImageView)
@@ -110,3 +95,66 @@ class DeviceControl: UIView {
     }
 
 }
+
+extension DeviceControl {
+    
+    var placeText: String? {
+        get {
+            return placeNameLabel.text
+        }
+        set(newText) {
+            placeNameLabel.text = newText
+        }
+    }
+    
+    var deviceText: String? {
+        get {
+            return deviceNameLabel.text
+        }
+        set(newText) {
+            deviceNameLabel.text = newText
+        }
+    }
+    
+    var deviceIconImage: UIImage? {
+        get {            
+            return deviceImageView.image
+        }
+        
+        set {
+            deviceImageView.image = newValue
+        }        
+    }
+    
+    var statusText: String? {
+        get {
+            return statusLabel.text
+        }
+        set(newText) {
+            statusLabel.text = newText
+        }
+    }
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
