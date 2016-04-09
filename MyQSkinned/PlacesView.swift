@@ -13,6 +13,8 @@ class PlacesView: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
     
+    let interactor = Interactor()
+    
     private let deviceControl = DeviceControl()
     var devicesArray = [DeviceControl]()
 
@@ -37,6 +39,8 @@ class PlacesView: UIViewController {
         
         
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -67,11 +71,23 @@ class PlacesView: UIViewController {
         return .LightContent
     }
     
+    @IBAction func openMenu(sender: AnyObject) {
+        performSegueWithIdentifier("openMenu", sender: nil)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let destinationViewController = segue.destinationViewController as? Menu {
+            destinationViewController.transitioningDelegate = self
+            
+            destinationViewController.interactor = interactor
+        }
+    }
+    
     
 }
 
 
-extension PlacesView: UIScrollViewDelegate {
+extension PlacesView: UIScrollViewDelegate, UIViewControllerTransitioningDelegate {
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
         let pageWidth = CGRectGetWidth(scrollView.bounds)
@@ -79,6 +95,18 @@ extension PlacesView: UIScrollViewDelegate {
         
         pageControl.currentPage = Int(round(pageFraction))
         
+    }
+    
+    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return PresentMenuAnimator()
+    }
+    
+    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return DismissMenuAnimator()
+    }
+    
+    func interactionControllerForDismissal(animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        return interactor.hasStarted ? interactor : nil
     }
     
 }

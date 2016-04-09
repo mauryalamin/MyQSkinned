@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		AE0373861CA8635E00E38B81 /* OnboardSingleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0373851CA8635E00E38B81 /* OnboardSingleView.swift */; };
 		AE0373881CA8638600E38B81 /* OnboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0373871CA8638600E38B81 /* OnboardView.swift */; };
+		AE32DDF01CB9AE500063E92F /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE32DDEE1CB9AE500063E92F /* Interactor.swift */; };
+		AE32DDF11CB9AE500063E92F /* MenuHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE32DDEF1CB9AE500063E92F /* MenuHelper.swift */; };
+		AE32DDF31CB9AEA90063E92F /* PresentMenuAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE32DDF21CB9AEA90063E92F /* PresentMenuAnimator.swift */; };
+		AE32DDF51CB9B3EE0063E92F /* DismissMenuAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE32DDF41CB9B3EE0063E92F /* DismissMenuAnimator.swift */; };
 		AE5721EA1CA6FC360081AD35 /* CreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5721E91CA6FC360081AD35 /* CreateAccount.swift */; };
 		AE5721EC1CA6FC4F0081AD35 /* VerifyAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5721EB1CA6FC4F0081AD35 /* VerifyAccount.swift */; };
 		AE98DD281C95A50D0000AC40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE98DD271C95A50D0000AC40 /* AppDelegate.swift */; };
@@ -62,6 +66,10 @@
 /* Begin PBXFileReference section */
 		AE0373851CA8635E00E38B81 /* OnboardSingleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardSingleView.swift; sourceTree = "<group>"; };
 		AE0373871CA8638600E38B81 /* OnboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardView.swift; sourceTree = "<group>"; };
+		AE32DDEE1CB9AE500063E92F /* Interactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		AE32DDEF1CB9AE500063E92F /* MenuHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuHelper.swift; sourceTree = "<group>"; };
+		AE32DDF21CB9AEA90063E92F /* PresentMenuAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentMenuAnimator.swift; sourceTree = "<group>"; };
+		AE32DDF41CB9B3EE0063E92F /* DismissMenuAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissMenuAnimator.swift; sourceTree = "<group>"; };
 		AE5721E91CA6FC360081AD35 /* CreateAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccount.swift; sourceTree = "<group>"; };
 		AE5721EB1CA6FC4F0081AD35 /* VerifyAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyAccount.swift; sourceTree = "<group>"; };
 		AE98DD241C95A50D0000AC40 /* MyQSkinned.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyQSkinned.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -181,6 +189,10 @@
 		AE98DD501C95A87A0000AC40 /* Helper Classes */ = {
 			isa = PBXGroup;
 			children = (
+				AE32DDF41CB9B3EE0063E92F /* DismissMenuAnimator.swift */,
+				AE32DDF21CB9AEA90063E92F /* PresentMenuAnimator.swift */,
+				AE32DDEE1CB9AE500063E92F /* Interactor.swift */,
+				AE32DDEF1CB9AE500063E92F /* MenuHelper.swift */,
 				AE98DD471C95A5BA0000AC40 /* UIImageView.swift */,
 				AEF47D4C1CB5BC4A00F3FB91 /* TransparentNavigationController.swift */,
 			);
@@ -364,14 +376,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE32DDF51CB9B3EE0063E92F /* DismissMenuAnimator.swift in Sources */,
 				AE98DD4A1C95A6740000AC40 /* MenuItem.swift in Sources */,
 				AE0373881CA8638600E38B81 /* OnboardView.swift in Sources */,
 				AEF0927C1CAC7446005C3DEF /* DeviceControl.swift in Sources */,
+				AE32DDF31CB9AEA90063E92F /* PresentMenuAnimator.swift in Sources */,
 				AE5721EA1CA6FC360081AD35 /* CreateAccount.swift in Sources */,
 				AE98DD481C95A5BA0000AC40 /* UIImageView.swift in Sources */,
 				AE5721EC1CA6FC4F0081AD35 /* VerifyAccount.swift in Sources */,
+				AE32DDF11CB9AE500063E92F /* MenuHelper.swift in Sources */,
 				AE0373861CA8635E00E38B81 /* OnboardSingleView.swift in Sources */,
 				AEF0927A1CAC73AD005C3DEF /* PlacesView.swift in Sources */,
+				AE32DDF01CB9AE500063E92F /* Interactor.swift in Sources */,
 				AE98DD281C95A50D0000AC40 /* AppDelegate.swift in Sources */,
 				AE98DD851C95ED180000AC40 /* Launch.swift in Sources */,
 				AEF47D4D1CB5BC4A00F3FB91 /* TransparentNavigationController.swift in Sources */,

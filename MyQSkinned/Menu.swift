@@ -16,6 +16,8 @@ class Menu: UIViewController {
     @IBOutlet weak var rulesButton: MenuItem!
     @IBOutlet weak var historyButton: MenuItem!
     @IBOutlet weak var helpButton: MenuItem!
+    
+    var interactor:Interactor? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,17 +29,6 @@ class Menu: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     @IBAction func buttonTouched(sender: MenuItem) {
         
@@ -51,6 +42,31 @@ class Menu: UIViewController {
         sender.buttonSelected()
         print("\(sender.label.text!)")
         
+        
     }
+    
+    @IBAction func handleGesture(sender: UIPanGestureRecognizer) {
+        // 3
+        let translation = sender.translationInView(view)
+        // 4
+        let progress = MenuHelper.calculateProgress(
+            translation,
+            viewBounds: view.bounds,
+            direction: .Left
+        )
+        // 5
+        MenuHelper.mapGestureStateToInteractor(
+            sender.state,
+            progress: progress,
+            interactor: interactor){
+                // 6
+                self.dismissViewControllerAnimated(true, completion: nil)
+        }
+    }
+    
+    @IBAction func closeMenu(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+
 
 }
