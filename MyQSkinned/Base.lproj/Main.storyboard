@@ -43,7 +43,7 @@
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--Places View-->
+        <!--Places-->
         <scene sceneID="dbE-iG-mKT">
             <objects>
                 <viewController id="bmN-ay-IuL" customClass="PlacesView" customModule="MyQSkinned" customModuleProvider="target" sceneMemberID="viewController">
@@ -59,7 +59,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ie-xi-ZDH">
-                                <rect key="frame" x="0.0" y="20" width="600" height="450"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="450"/>
                                 <connections>
                                     <outlet property="delegate" destination="bmN-ay-IuL" id="9iM-OL-Irj"/>
                                 </connections>
@@ -72,7 +72,7 @@
                                 </constraints>
                             </imageView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="qPn-Gz-PDC">
-                                <rect key="frame" x="0.5" y="505" width="600" height="37"/>
+                                <rect key="frame" x="0.0" y="505" width="600" height="37"/>
                             </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -92,6 +92,10 @@
                             <constraint firstItem="KRz-IQ-SpI" firstAttribute="top" secondItem="z8l-fd-P5J" secondAttribute="bottom" id="zEK-hm-qaS"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Places" id="WtD-d5-16i">
+                        <barButtonItem key="leftBarButtonItem" image="menuIcon" id="hy2-C9-5E9"/>
+                        <barButtonItem key="rightBarButtonItem" image="addIcon" id="ANE-H5-82p"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="pageControl" destination="qPn-Gz-PDC" id="VgS-oz-X85"/>
                         <outlet property="scrollView" destination="0ie-xi-ZDH" id="7ma-NA-87u"/>
@@ -99,7 +103,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tmr-zW-l3c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-658" y="485"/>
+            <point key="canvasLocation" x="-438" y="485"/>
         </scene>
         <!--Launch-->
         <scene sceneID="tne-QT-ifu">
@@ -204,7 +208,7 @@
                                 <fontDescription key="fontDescription" name="TitilliumWeb-Regular" family="Titillium Web" pointSize="23"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
-                                    <segue destination="bmN-ay-IuL" kind="show" id="elT-iI-5sS"/>
+                                    <segue destination="yeo-Em-6pm" kind="show" id="elT-iI-5sS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4m-af-gzm">
@@ -214,7 +218,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="LW1-fC-XAC" kind="presentation" modalTransitionStyle="crossDissolve" id="3Xe-y7-ADO"/>
+                                    <segue destination="nZD-D2-YSl" kind="presentation" modalTransitionStyle="crossDissolve" id="3Xe-y7-ADO"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="©2016 The Chamberlain Group Inc." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="85w-qD-M0X">
@@ -291,9 +295,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="55" y="540"/>
+            <point key="canvasLocation" x="935" y="-292"/>
         </scene>
-        <!--Create Account-->
+        <!--Sign Up-->
         <scene sceneID="359-Im-6jZ">
             <objects>
                 <viewController id="LW1-fC-XAC" customClass="CreateAccount" customModule="MyQSkinned" customModuleProvider="target" sceneMemberID="viewController">
@@ -302,15 +306,15 @@
                         <viewControllerLayoutGuide type="bottom" id="Hak-1w-Lcx"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="CTH-U0-LIM">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="720"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="784"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="basic-wallpaper2-sq" translatesAutoresizingMaskIntoConstraints="NO" id="pfH-xd-l1h">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="720"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="784"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D3B-5s-D3v">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="720"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="720"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gPf-jE-27b">
                                         <rect key="frame" x="75" y="34" width="450" height="25"/>
@@ -493,9 +497,6 @@
                                         <state key="normal" title="Privacy Statement">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <connections>
-                                            <segue destination="jyO-mI-gSQ" kind="show" id="4SR-aI-aPA"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXk-2Q-qXZ">
                                         <rect key="frame" x="75" y="536" width="22" height="22"/>
@@ -623,29 +624,43 @@
                             <constraint firstAttribute="trailing" secondItem="pfH-xd-l1h" secondAttribute="trailing" id="Z7Z-Ge-khw"/>
                             <constraint firstItem="pfH-xd-l1h" firstAttribute="leading" secondItem="CTH-U0-LIM" secondAttribute="leading" id="oW3-Iu-T2r"/>
                             <constraint firstItem="Hak-1w-Lcx" firstAttribute="top" secondItem="pfH-xd-l1h" secondAttribute="bottom" id="vNj-9Z-UhH"/>
-                            <constraint firstItem="D3B-5s-D3v" firstAttribute="top" secondItem="CTH-U0-LIM" secondAttribute="top" id="yo2-SS-7Ey"/>
+                            <constraint firstItem="D3B-5s-D3v" firstAttribute="top" secondItem="CTH-U0-LIM" secondAttribute="top" constant="64" id="yo2-SS-7Ey"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Sign Up" id="DYI-To-enD">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="ft0-bk-Zq7">
+                            <connections>
+                                <action selector="dismissView:" destination="LW1-fC-XAC" id="dw9-Ub-njY"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Submit" id="hlf-Cs-Sg8">
+                            <connections>
+                                <segue destination="jyO-mI-gSQ" kind="show" id="0fl-Kb-5Zh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="600" height="720"/>
+                    <size key="freeformSize" width="600" height="784"/>
                     <connections>
                         <outlet property="acctEmail" destination="A9E-gV-VOl" id="ncf-8X-7Em"/>
                         <outlet property="acctLinkCheck" destination="ihY-T5-hB3" id="0BX-9B-NuH"/>
                         <outlet property="agreeCheck" destination="THQ-KL-8QU" id="hid-gD-kR5"/>
+                        <outlet property="cancelButton" destination="ft0-bk-Zq7" id="4YR-Yw-0xC"/>
                         <outlet property="createPassword" destination="gyF-ar-ZBg" id="xna-le-9rR"/>
                         <outlet property="firstName" destination="gPf-jE-27b" id="Edu-Dk-bK4"/>
                         <outlet property="getInfoCheck" destination="hXk-2Q-qXZ" id="JKi-oZ-pa3"/>
                         <outlet property="lastName" destination="f8N-no-bi5" id="vU0-bn-zfT"/>
                         <outlet property="scrollView" destination="D3B-5s-D3v" id="nFC-Ud-fGb"/>
+                        <outlet property="submitButton" destination="hlf-Cs-Sg8" id="40K-bc-MOK"/>
                         <outlet property="verifyPassword" destination="ns0-OM-LVf" id="GbA-Sz-sAq"/>
                         <outlet property="zipCode" destination="ljI-C4-BrE" id="bqx-eM-NLo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cul-eO-RlD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1043" y="420"/>
+            <point key="canvasLocation" x="2503" y="577"/>
         </scene>
-        <!--Verify Account-->
+        <!--Verify Your Email-->
         <scene sceneID="g8K-xF-aDQ">
             <objects>
                 <viewController id="jyO-mI-gSQ" customClass="VerifyAccount" customModule="MyQSkinned" customModuleProvider="target" sceneMemberID="viewController">
@@ -654,21 +669,21 @@
                         <viewControllerLayoutGuide type="bottom" id="Yvg-Os-6Yv"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="P1Y-gs-v06">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="720"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="784"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="basic-wallpaper2-sq" translatesAutoresizingMaskIntoConstraints="NO" id="0NI-VL-BVG">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="720"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="784"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="An email has been sent to you. Please check your email inbox to complete the registration process." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GFK-eW-Oco">
-                                <rect key="frame" x="20" y="28" width="560" height="23.5"/>
+                                <rect key="frame" x="20" y="72" width="560" height="23.5"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please check your junk/spam folder for the MyQ verification email if it’s not in your inbox." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BO5-qE-BXs">
-                                <rect key="frame" x="20" y="99" width="560" height="38.5"/>
+                                <rect key="frame" x="20" y="143" width="560" height="38.5"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -688,10 +703,20 @@
                             <constraint firstAttribute="trailingMargin" secondItem="BO5-qE-BXs" secondAttribute="trailing" id="uMv-li-xqX"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Verify Your Email" id="0ow-MP-ZBo">
+                        <barButtonItem key="rightBarButtonItem" title="OK" id="Jif-Fk-NQ5">
+                            <connections>
+                                <action selector="dismissView:" destination="jyO-mI-gSQ" id="osM-aX-TVx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="okButton" destination="Jif-Fk-NQ5" id="NhT-x6-1we"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="csG-bL-mVS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1768" y="420"/>
+            <point key="canvasLocation" x="3180" y="577"/>
         </scene>
         <!--Onboard Single View-->
         <scene sceneID="hWx-rk-7Bt">
@@ -755,7 +780,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LMz-dN-shO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-976" y="1227"/>
+            <point key="canvasLocation" x="268" y="1331"/>
         </scene>
         <!--Onboard View-->
         <scene sceneID="ybC-5d-rcn">
@@ -811,7 +836,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CrV-2B-Z8Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-337" y="1227"/>
+            <point key="canvasLocation" x="935" y="1167"/>
         </scene>
         <!--Menu-->
         <scene sceneID="Vdj-GS-DYt">
@@ -919,11 +944,48 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AV7-D3-9xS" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="294" y="1227"/>
+            <point key="canvasLocation" x="-82" y="-509"/>
+        </scene>
+        <!--Transparent Navigation Controller-->
+        <scene sceneID="Vml-h9-2Sy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nZD-D2-YSl" customClass="TransparentNavigationController" customModule="MyQSkinned" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="s60-Wp-UmS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="LW1-fC-XAC" kind="relationship" relationship="rootViewController" id="56k-ms-Rb4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GYU-Vf-T3M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1843" y="485"/>
+        </scene>
+        <!--Transparent Navigation Controller-->
+        <scene sceneID="6TW-qA-B55">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yeo-Em-6pm" customClass="TransparentNavigationController" customModule="MyQSkinned" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eKF-og-5fb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bmN-ay-IuL" kind="relationship" relationship="rootViewController" id="21y-7i-4az"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KCR-Jy-QUn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="226" y="485"/>
         </scene>
     </scenes>
     <resources>
         <image name="account-icon" width="26" height="26"/>
+        <image name="addIcon" width="16" height="16"/>
         <image name="basic-wallpaper2-sq" width="568" height="568"/>
         <image name="ch-wallpaper-sq" width="568" height="568"/>
         <image name="chamberlain-logo-ko" width="207" height="18"/>
@@ -935,6 +997,7 @@
         <image name="help-icon" width="26" height="26"/>
         <image name="history-icon" width="26" height="26"/>
         <image name="manage-places" width="26" height="26"/>
+        <image name="menuIcon" width="21" height="15"/>
         <image name="myq-logo-ko" width="64" height="34"/>
         <image name="onboard1" width="320" height="568"/>
         <image name="place-icon" width="26" height="26"/>

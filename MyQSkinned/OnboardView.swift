@@ -70,6 +70,10 @@ class OnboardView: UIViewController {
         self.dismissViewControllerAnimated(true, completion: {})
         
     }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
+    }
 
 }
 

@@ -63,6 +63,10 @@ class PlacesView: UIViewController {
         
     }
     
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
+    }
+    
     
 }
 

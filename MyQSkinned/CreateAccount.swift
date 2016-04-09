@@ -11,6 +11,8 @@ import UIKit
 class CreateAccount: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var cancelButton: UIBarButtonItem!
+    @IBOutlet weak var submitButton: UIBarButtonItem!
     
     // Textfields
     @IBOutlet weak var firstName: UITextField!
@@ -36,6 +38,9 @@ class CreateAccount: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        cancelButton.setTitleTextAttributes([ NSFontAttributeName: UIFont(name: "TitilliumWeb-Light", size: 16)!], forState: UIControlState.Normal)
+        submitButton.setTitleTextAttributes([ NSFontAttributeName: UIFont(name: "TitilliumWeb-Light", size: 16)!], forState: UIControlState.Normal)
         
         scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         scrollView.scrollIndicatorInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
@@ -119,6 +124,16 @@ class CreateAccount: UIViewController, UITextFieldDelegate {
         
         scrollView.contentInset.bottom += adjustmentHeight
         scrollView.scrollIndicatorInsets.bottom += adjustmentHeight
+        
+    }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
+    }
+    
+    @IBAction func dismissView(sender: UIBarButtonItem) {
+        
+        self.dismissViewControllerAnimated(true, completion: nil)
         
     }
     

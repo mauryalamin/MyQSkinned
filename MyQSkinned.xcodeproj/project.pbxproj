@@ -46,6 +46,7 @@
 		AE98DD851C95ED180000AC40 /* Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE98DD841C95ED180000AC40 /* Launch.swift */; };
 		AEF0927A1CAC73AD005C3DEF /* PlacesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF092791CAC73AD005C3DEF /* PlacesView.swift */; };
 		AEF0927C1CAC7446005C3DEF /* DeviceControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF0927B1CAC7446005C3DEF /* DeviceControl.swift */; };
+		AEF47D4D1CB5BC4A00F3FB91 /* TransparentNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF47D4C1CB5BC4A00F3FB91 /* TransparentNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		AE98DD841C95ED180000AC40 /* Launch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Launch.swift; sourceTree = "<group>"; };
 		AEF092791CAC73AD005C3DEF /* PlacesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesView.swift; sourceTree = "<group>"; };
 		AEF0927B1CAC7446005C3DEF /* DeviceControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceControl.swift; sourceTree = "<group>"; };
+		AEF47D4C1CB5BC4A00F3FB91 /* TransparentNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransparentNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				AE98DD471C95A5BA0000AC40 /* UIImageView.swift */,
+				AEF47D4C1CB5BC4A00F3FB91 /* TransparentNavigationController.swift */,
 			);
 			name = "Helper Classes";
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 				AEF0927A1CAC73AD005C3DEF /* PlacesView.swift in Sources */,
 				AE98DD281C95A50D0000AC40 /* AppDelegate.swift in Sources */,
 				AE98DD851C95ED180000AC40 /* Launch.swift in Sources */,
+				AEF47D4D1CB5BC4A00F3FB91 /* TransparentNavigationController.swift in Sources */,
 				AE98DD4E1C95A7480000AC40 /* Menu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

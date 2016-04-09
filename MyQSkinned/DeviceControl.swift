@@ -66,7 +66,7 @@ class DeviceControl: UIView {
         addSubview(deviceImageView)
         addSubview(statusLabel)
         
-        let spacing: CGFloat = 4
+        let spacing: CGFloat = 16
         
         NSLayoutConstraint.activateConstraints([
             // heightAnchor.constraintEqualToAnchor(widthAnchor, multiplier: 0.8),

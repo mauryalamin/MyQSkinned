@@ -1,29 +1,29 @@
 //
-//  VerifyAccount.swift
+//  TransparentNavigationController.swift
 //  MyQSkinned
 //
-//  Created by Maury Alamin on 3/26/16.
+//  Created by Maury Alamin on 4/6/16.
 //  Copyright © 2016 Alamin. All rights reserved.
 //
 
 import UIKit
 
-class VerifyAccount: UIViewController {
+class TransparentNavigationController: UINavigationController {
 
-    @IBOutlet weak var okButton: UIBarButtonItem!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        // Set Nav Bar Invisible
+        self.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        self.navigationBar.shadowImage = UIImage()
+        self.navigationBar.translucent = true
         
-        okButton.setTitleTextAttributes([ NSFontAttributeName: UIFont(name: "TitilliumWeb-Light", size: 16)!], forState: UIControlState.Normal)
-    }
-    
-    override func viewWillAppear(animated: Bool) {
+        self.navigationBar.barStyle = UIBarStyle.Black
+        self.navigationBar.tintColor = UIColor.whiteColor()
         
-        self.navigationItem.hidesBackButton = true
-        
+        //Navigation bar customization
+        self.navigationBar.titleTextAttributes = [NSFontAttributeName : (UIFont(name: "TitilliumWeb-Regular", size: 18))!]
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,15 +31,6 @@ class VerifyAccount: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func dismissView(sender: UIBarButtonItem) {
-        
-        self.dismissViewControllerAnimated(true, completion: nil)
-        
-    }
-    
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return .LightContent
-    }
 
     /*
     // MARK: - Navigation
