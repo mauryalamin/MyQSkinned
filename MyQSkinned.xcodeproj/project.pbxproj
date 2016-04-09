@@ -13,6 +13,11 @@
 		AE32DDF11CB9AE500063E92F /* MenuHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE32DDEF1CB9AE500063E92F /* MenuHelper.swift */; };
 		AE32DDF31CB9AEA90063E92F /* PresentMenuAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE32DDF21CB9AEA90063E92F /* PresentMenuAnimator.swift */; };
 		AE32DDF51CB9B3EE0063E92F /* DismissMenuAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE32DDF41CB9B3EE0063E92F /* DismissMenuAnimator.swift */; };
+		AE32DDF71CB9BA010063E92F /* ManagePlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE32DDF61CB9BA010063E92F /* ManagePlaces.swift */; };
+		AE32DDF91CB9BA280063E92F /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE32DDF81CB9BA280063E92F /* Account.swift */; };
+		AE32DDFB1CB9BA490063E92F /* Rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE32DDFA1CB9BA480063E92F /* Rules.swift */; };
+		AE32DDFD1CB9BA680063E92F /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE32DDFC1CB9BA680063E92F /* History.swift */; };
+		AE32DDFF1CB9BA770063E92F /* Help.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE32DDFE1CB9BA770063E92F /* Help.swift */; };
 		AE5721EA1CA6FC360081AD35 /* CreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5721E91CA6FC360081AD35 /* CreateAccount.swift */; };
 		AE5721EC1CA6FC4F0081AD35 /* VerifyAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5721EB1CA6FC4F0081AD35 /* VerifyAccount.swift */; };
 		AE98DD281C95A50D0000AC40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE98DD271C95A50D0000AC40 /* AppDelegate.swift */; };
@@ -70,6 +75,11 @@
 		AE32DDEF1CB9AE500063E92F /* MenuHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuHelper.swift; sourceTree = "<group>"; };
 		AE32DDF21CB9AEA90063E92F /* PresentMenuAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentMenuAnimator.swift; sourceTree = "<group>"; };
 		AE32DDF41CB9B3EE0063E92F /* DismissMenuAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissMenuAnimator.swift; sourceTree = "<group>"; };
+		AE32DDF61CB9BA010063E92F /* ManagePlaces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagePlaces.swift; sourceTree = "<group>"; };
+		AE32DDF81CB9BA280063E92F /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		AE32DDFA1CB9BA480063E92F /* Rules.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rules.swift; sourceTree = "<group>"; };
+		AE32DDFC1CB9BA680063E92F /* History.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		AE32DDFE1CB9BA770063E92F /* Help.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Help.swift; sourceTree = "<group>"; };
 		AE5721E91CA6FC360081AD35 /* CreateAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccount.swift; sourceTree = "<group>"; };
 		AE5721EB1CA6FC4F0081AD35 /* VerifyAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyAccount.swift; sourceTree = "<group>"; };
 		AE98DD241C95A50D0000AC40 /* MyQSkinned.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyQSkinned.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -182,6 +192,11 @@
 				AE0373871CA8638600E38B81 /* OnboardView.swift */,
 				AE0373851CA8635E00E38B81 /* OnboardSingleView.swift */,
 				AEF092791CAC73AD005C3DEF /* PlacesView.swift */,
+				AE32DDF61CB9BA010063E92F /* ManagePlaces.swift */,
+				AE32DDF81CB9BA280063E92F /* Account.swift */,
+				AE32DDFA1CB9BA480063E92F /* Rules.swift */,
+				AE32DDFC1CB9BA680063E92F /* History.swift */,
+				AE32DDFE1CB9BA770063E92F /* Help.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -381,15 +396,20 @@
 				AE0373881CA8638600E38B81 /* OnboardView.swift in Sources */,
 				AEF0927C1CAC7446005C3DEF /* DeviceControl.swift in Sources */,
 				AE32DDF31CB9AEA90063E92F /* PresentMenuAnimator.swift in Sources */,
+				AE32DDF91CB9BA280063E92F /* Account.swift in Sources */,
 				AE5721EA1CA6FC360081AD35 /* CreateAccount.swift in Sources */,
 				AE98DD481C95A5BA0000AC40 /* UIImageView.swift in Sources */,
 				AE5721EC1CA6FC4F0081AD35 /* VerifyAccount.swift in Sources */,
+				AE32DDF71CB9BA010063E92F /* ManagePlaces.swift in Sources */,
 				AE32DDF11CB9AE500063E92F /* MenuHelper.swift in Sources */,
 				AE0373861CA8635E00E38B81 /* OnboardSingleView.swift in Sources */,
 				AEF0927A1CAC73AD005C3DEF /* PlacesView.swift in Sources */,
 				AE32DDF01CB9AE500063E92F /* Interactor.swift in Sources */,
+				AE32DDFF1CB9BA770063E92F /* Help.swift in Sources */,
+				AE32DDFD1CB9BA680063E92F /* History.swift in Sources */,
 				AE98DD281C95A50D0000AC40 /* AppDelegate.swift in Sources */,
 				AE98DD851C95ED180000AC40 /* Launch.swift in Sources */,
+				AE32DDFB1CB9BA490063E92F /* Rules.swift in Sources */,
 				AEF47D4D1CB5BC4A00F3FB91 /* TransparentNavigationController.swift in Sources */,
 				AE98DD4E1C95A7480000AC40 /* Menu.swift in Sources */,
 			);

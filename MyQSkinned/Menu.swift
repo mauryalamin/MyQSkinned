@@ -17,12 +17,22 @@ class Menu: UIViewController {
     @IBOutlet weak var historyButton: MenuItem!
     @IBOutlet weak var helpButton: MenuItem!
     
+    var menuButtons: [MenuItem]!
+    
     var interactor:Interactor? = nil
+    
+    var currentView: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        menuButtons = [placesButton, manageButton, accountButton, rulesButton, historyButton, helpButton]
+        
+        buttonStates(currentView)
+        
+        print("The view that call Menu was \(currentView)")
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,6 +42,7 @@ class Menu: UIViewController {
     
     @IBAction func buttonTouched(sender: MenuItem) {
         
+        /*
         placesButton.buttonUnselected()
         manageButton.buttonUnselected()
         accountButton.buttonUnselected()
@@ -41,7 +52,21 @@ class Menu: UIViewController {
         
         sender.buttonSelected()
         print("\(sender.label.text!)")
+        */
         
+    }
+    
+    func buttonStates(onButton: String) {
+        // stuff
+        for button in menuButtons {
+            
+            if button.label.text != onButton {
+                button.buttonUnselected()
+            } else {
+                button.buttonSelected()
+            }
+            
+        }
         
     }
     

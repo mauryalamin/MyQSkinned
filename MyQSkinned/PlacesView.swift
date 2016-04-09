@@ -15,6 +15,8 @@ class PlacesView: UIViewController {
     
     let interactor = Interactor()
     
+    let thisView = "Places"
+    
     private let deviceControl = DeviceControl()
     var devicesArray = [DeviceControl]()
 
@@ -78,8 +80,10 @@ class PlacesView: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let destinationViewController = segue.destinationViewController as? Menu {
             destinationViewController.transitioningDelegate = self
-            
             destinationViewController.interactor = interactor
+            
+            // Tell Menu View who called it
+            destinationViewController.currentView = "Places"
         }
     }
     
