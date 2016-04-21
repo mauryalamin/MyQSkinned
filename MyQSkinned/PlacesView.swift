@@ -13,16 +13,12 @@ class PlacesView: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
     
-    let interactor = Interactor()
-    
-    let thisView = "Places"
-    
     private let deviceControl = DeviceControl()
     var devicesArray = [DeviceControl]()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         scrollView.pagingEnabled = true
         
@@ -42,14 +38,12 @@ class PlacesView: UIViewController {
         
     }
     
-    
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     private func configureAndAddDevice(type: String, placeName: String, deviceName: String, deviceIcon: String) -> DeviceControl {
         
         let deviceControl = DeviceControl()
@@ -73,25 +67,11 @@ class PlacesView: UIViewController {
         return .LightContent
     }
     
-    @IBAction func openMenu(sender: AnyObject) {
-        performSegueWithIdentifier("openMenu", sender: nil)
-    }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let destinationViewController = segue.destinationViewController as? Menu {
-            destinationViewController.transitioningDelegate = self
-            destinationViewController.interactor = interactor
-            
-            // Tell Menu View who called it
-            destinationViewController.currentView = "Places"
-        }
-    }
-    
     
 }
 
 
-extension PlacesView: UIScrollViewDelegate, UIViewControllerTransitioningDelegate {
+extension PlacesView: UIScrollViewDelegate {
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
         let pageWidth = CGRectGetWidth(scrollView.bounds)
@@ -99,18 +79,6 @@ extension PlacesView: UIScrollViewDelegate, UIViewControllerTransitioningDelegat
         
         pageControl.currentPage = Int(round(pageFraction))
         
-    }
-    
-    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return PresentMenuAnimator()
-    }
-    
-    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return DismissMenuAnimator()
-    }
-    
-    func interactionControllerForDismissal(animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-        return interactor.hasStarted ? interactor : nil
     }
     
 }

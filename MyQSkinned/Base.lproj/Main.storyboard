@@ -93,22 +93,17 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Places" id="WtD-d5-16i">
-                        <barButtonItem key="leftBarButtonItem" image="menuIcon" id="hy2-C9-5E9">
-                            <connections>
-                                <action selector="openMenu:" destination="bmN-ay-IuL" id="y1N-Br-QGk"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" image="menuIcon" id="hy2-C9-5E9"/>
                         <barButtonItem key="rightBarButtonItem" image="addIcon" id="ANE-H5-82p"/>
                     </navigationItem>
                     <connections>
                         <outlet property="pageControl" destination="qPn-Gz-PDC" id="VgS-oz-X85"/>
                         <outlet property="scrollView" destination="0ie-xi-ZDH" id="7ma-NA-87u"/>
-                        <segue destination="e8r-WU-nPj" kind="presentation" identifier="openMenu" id="OGE-bY-fSW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tmr-zW-l3c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-196" y="485"/>
+            <point key="canvasLocation" x="-438" y="485"/>
         </scene>
         <!--Launch-->
         <scene sceneID="tne-QT-ifu">
@@ -301,24 +296,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="935" y="-292"/>
-        </scene>
-        <!--Manage Places-->
-        <scene sceneID="lNP-le-Fg8">
-            <objects>
-                <viewController id="xex-VT-jq4" customClass="ManagePlaces" customModule="MyQSkinned" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Lsu-zh-hVA"/>
-                        <viewControllerLayoutGuide type="bottom" id="PhU-RH-nEI"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="EFy-wN-uwT">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FWb-eI-NW2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="935" y="-984"/>
         </scene>
         <!--Sign Up-->
         <scene sceneID="359-Im-6jZ">
@@ -933,17 +910,6 @@
                                     <action selector="buttonTouched:" destination="e8r-WU-nPj" eventType="touchUpInside" id="INk-HE-ov8"/>
                                 </connections>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fnI-hc-UEx">
-                                <rect key="frame" x="560" y="20" width="40" height="580"/>
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="Zx3-1H-q0g"/>
-                                </constraints>
-                                <connections>
-                                    <action selector="closeMenu:" destination="e8r-WU-nPj" eventType="touchUpInside" id="aHH-cF-bL1"/>
-                                    <outletCollection property="gestureRecognizers" destination="ul3-BJ-0xT" appends="YES" id="Ciq-Av-FFe"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -960,14 +926,11 @@
                             <constraint firstItem="J3L-B0-bQ4" firstAttribute="centerX" secondItem="8Y7-AS-mj9" secondAttribute="centerX" id="bcP-JE-Epa"/>
                             <constraint firstItem="od2-EP-gJJ" firstAttribute="centerX" secondItem="8Y7-AS-mj9" secondAttribute="centerX" id="iBL-rg-Ck2"/>
                             <constraint firstItem="2ky-14-wKw" firstAttribute="top" secondItem="J3L-B0-bQ4" secondAttribute="bottom" constant="8" id="k5o-Dr-YIk"/>
-                            <constraint firstItem="AEq-6e-AXr" firstAttribute="top" secondItem="fnI-hc-UEx" secondAttribute="bottom" id="kfs-mN-DvF"/>
-                            <constraint firstAttribute="trailing" secondItem="fnI-hc-UEx" secondAttribute="trailing" id="l0E-2b-Nlj"/>
                             <constraint firstItem="sNX-q4-kq2" firstAttribute="top" secondItem="od2-EP-gJJ" secondAttribute="bottom" constant="8" id="q1h-bw-3ky"/>
                             <constraint firstItem="2ky-14-wKw" firstAttribute="centerX" secondItem="8Y7-AS-mj9" secondAttribute="centerX" id="qOS-kh-bEC"/>
                             <constraint firstItem="K5f-9M-VzK" firstAttribute="top" secondItem="uEX-Ub-u0m" secondAttribute="bottom" constant="8" id="uI2-N0-Ovy"/>
                             <constraint firstItem="od2-EP-gJJ" firstAttribute="top" secondItem="KrX-dZ-B6P" secondAttribute="bottom" constant="8" id="x8X-Mh-vAT"/>
                             <constraint firstItem="2ky-14-wKw" firstAttribute="width" secondItem="8Y7-AS-mj9" secondAttribute="width" id="xU5-2S-kiA"/>
-                            <constraint firstItem="fnI-hc-UEx" firstAttribute="top" secondItem="KrX-dZ-B6P" secondAttribute="bottom" id="yS3-gT-tCv"/>
                         </constraints>
                     </view>
                     <connections>
@@ -980,13 +943,8 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AV7-D3-9xS" sceneMemberID="firstResponder"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="ul3-BJ-0xT">
-                    <connections>
-                        <action selector="handleGesture:" destination="e8r-WU-nPj" id="Cby-PD-0Qr"/>
-                    </connections>
-                </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-242" y="-509"/>
+            <point key="canvasLocation" x="-82" y="-509"/>
         </scene>
         <!--Transparent Navigation Controller-->
         <scene sceneID="Vml-h9-2Sy">
@@ -1022,7 +980,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KCR-Jy-QUn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="456" y="485"/>
+            <point key="canvasLocation" x="226" y="485"/>
         </scene>
     </scenes>
     <resources>
