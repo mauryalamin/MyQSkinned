@@ -22,11 +22,11 @@ class OnboardView: UIViewController {
         
         scrollView.pagingEnabled = true
         
-        let page1 = createAndAddOnboardView("onboard1", titleText: "Smarter is Better", descriptionText: "With MyQ, stay connected and control your home – from anywhere, at anytime.")
-        let page2 = createAndAddOnboardView("onboard2", titleText: "Always informed", descriptionText: "Know if your garage door opens or if you forgot to close it.\r\rHistory reveals detailed event activity for your devices. ")
-        let page3 = createAndAddOnboardView("onboard3", titleText: "More than garage door openers", descriptionText: "Control of a variety of devices, like remote light controls and switches.\r\rAdd even more devices from our partners with Account Linking.")
-        let page4 = createAndAddOnboardView("onboard4", titleText: "Added Security", descriptionText: "Rest assured knowing only authorized users can open your garage doors, when you add a pin code to your door opener. ")
-        let page5 = createAndAddOnboardView("onboard5", titleText: "Peace of mind in the palm of your hand", descriptionText: "Stay connected and in control with MyQ.")
+        let page1 = createAndAddOnboardView("onboard1", titleText: "Smarter is Better", titleLines: 1, descriptionText: "With MyQ, stay connected and control your home – from anywhere, at anytime.")
+        let page2 = createAndAddOnboardView("onboard2", titleText: "Always informed", titleLines: 1, descriptionText: "Know if your garage door opens or if you forgot to close it.\r\rHistory reveals detailed event activity for your devices. ")
+        let page3 = createAndAddOnboardView("onboard3", titleText: "More than garage door openers", titleLines: 2, descriptionText: "Control of a variety of devices, like remote light controls and switches.\r\rAdd even more devices from our partners with Account Linking.")
+        let page4 = createAndAddOnboardView("onboard4", titleText: "Added Security", titleLines: 1, descriptionText: "Rest assured knowing only authorized users can open your garage doors, when you add a pin code to your door opener. ")
+        let page5 = createAndAddOnboardView("onboard5", titleText: "Peace of mind in the palm of your hand", titleLines: 2, descriptionText: "Stay connected and in control with MyQ.")
         
         pages = [page1, page2, page3, page4, page5]
         pageControl.numberOfPages = pages.count
@@ -48,10 +48,11 @@ class OnboardView: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    private func createAndAddOnboardView(backgroundImageName: String, titleText: String, descriptionText: String) -> OnboardSingleView {
+    private func createAndAddOnboardView(backgroundImageName: String, titleText: String, titleLines: Int, descriptionText: String) -> OnboardSingleView {
         let onboardView = storyboard!.instantiateViewControllerWithIdentifier("OnboardSingleView") as! OnboardSingleView
         onboardView.view.translatesAutoresizingMaskIntoConstraints = false
         onboardView.backgroundImage = UIImage(named: backgroundImageName)
+        // onboardView.titleLines = titleLines
         onboardView.titleString = titleText
         onboardView.descriptionString = descriptionText
         

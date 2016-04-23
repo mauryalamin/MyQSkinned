@@ -27,7 +27,7 @@ class OnboardSingleView: UIViewController {
         backgroundImageView.image = backgroundImage
         
         if let titleString = titleString {
-            let font = UIFont(name: "OpenSans-Light", size:34.0)!
+            let font = UIFont(name: "OpenSans-Light", size:35.0)!
             let paragraphStyle = NSMutableParagraphStyle()
             // paragraphStyle.lineSpacing = 8
             paragraphStyle.alignment = .Center
@@ -37,7 +37,7 @@ class OnboardSingleView: UIViewController {
         }
         
         if let descriptionString = descriptionString {
-            let font = UIFont(name: "OpenSans", size:16.0)!
+            let font = UIFont(name: "OpenSans", size:17.0)!
             let paragraphStyle = NSMutableParagraphStyle()
             // paragraphStyle.lineSpacing = 0
             paragraphStyle.alignment = .Left
