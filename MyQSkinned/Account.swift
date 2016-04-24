@@ -9,6 +9,8 @@
 import UIKit
 
 class Account: UIViewController {
+    
+    let barButton = UIBarButtonItem.appearance()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +37,12 @@ class Account: UIViewController {
         
         //Navigation bar customization
         self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : (UIFont(name: "TitilliumWeb-Regular", size: 22))!]
+        // self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : (UIFont(name: "TitilliumWeb-Regular", size: 18))!]
+        
+        
+        if let font = UIFont(name: "TitilliumWeb-Regular", size: 18) {
+            barButton.setTitleTextAttributes([NSFontAttributeName: font], forState: UIControlState.Normal)
+        }
     }
     
     @IBAction func menuButton(sender: UIBarButtonItem) {
@@ -43,6 +51,18 @@ class Account: UIViewController {
         appDelegate.centerContainer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil)
     }
     
+    @IBAction func logoutTapped(sender: UIBarButtonItem) {
+        
+        // Sets flag to FALSE for system to remember that user is logged in and iOS saves state
+        NSUserDefaults.standardUserDefaults().setBool(false, forKey: "isUserLoggedIn")
+        NSUserDefaults.standardUserDefaults().synchronize()
+        
+        let launchViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Launch") as! Launch
+        let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        appDelegate.window?.rootViewController = launchViewController
+        
+    }
 
     /*
     // MARK: - Navigation

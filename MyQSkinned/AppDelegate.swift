@@ -18,29 +18,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        var rootViewController = self.window!.rootViewController
+        let isUserLoggedIn = NSUserDefaults.standardUserDefaults().boolForKey("isUserLoggedIn")
         
-        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        
-        let centerViewController = mainStoryboard.instantiateViewControllerWithIdentifier("PlacesView") as! PlacesView
-        let leftMenuViewController = mainStoryboard.instantiateViewControllerWithIdentifier("Menu") as! Menu
-        
-        let leftSideNav = UINavigationController(rootViewController: leftMenuViewController)
-        let centerNav = UINavigationController(rootViewController: centerViewController)
-        
-        centerContainer = MMDrawerController(centerViewController: centerNav, leftDrawerViewController: leftSideNav)
-        
-        centerContainer?.shadowRadius = 3.0
-        centerContainer?.setMaximumLeftDrawerWidth((window?.bounds.width)! - 55.0, animated: true, completion: nil)
-        
-        centerContainer!.openDrawerGestureModeMask = MMOpenDrawerGestureMode.PanningCenterView;
-        centerContainer!.closeDrawerGestureModeMask = MMCloseDrawerGestureMode.PanningCenterView;
-        
-        window!.rootViewController = centerContainer
-        window!.makeKeyAndVisible()
-        
-        
-        
+        if isUserLoggedIn {
+            
+            // var rootViewController = self.window!.rootViewController
+            
+            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            let centerViewController = mainStoryboard.instantiateViewControllerWithIdentifier("PlacesView") as! PlacesView
+            let leftMenuViewController = mainStoryboard.instantiateViewControllerWithIdentifier("Menu") as! Menu
+            
+            let leftSideNav = UINavigationController(rootViewController: leftMenuViewController)
+            let centerNav = UINavigationController(rootViewController: centerViewController)
+            
+            centerContainer = MMDrawerController(centerViewController: centerNav, leftDrawerViewController: leftSideNav)
+            
+            centerContainer?.shadowRadius = 3.0
+            centerContainer?.setMaximumLeftDrawerWidth((window?.bounds.width)! - 55.0, animated: true, completion: nil)
+            
+            centerContainer!.openDrawerGestureModeMask = MMOpenDrawerGestureMode.PanningCenterView;
+            centerContainer!.closeDrawerGestureModeMask = MMCloseDrawerGestureMode.PanningCenterView;
+            
+            window!.rootViewController = centerContainer
+            window!.makeKeyAndVisible()
+            
+        }
         
         return true
     }

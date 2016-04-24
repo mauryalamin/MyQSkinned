@@ -109,6 +109,41 @@ class Launch: UIViewController, UITextFieldDelegate {
     // MARK: - Button Methods
     
     // Button Actions
+    @IBAction func loginTapped(sender: UIButton) {
+        
+        let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        // var rootViewController = appDelegate.window!.rootViewController
+        
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let centerViewController = mainStoryboard.instantiateViewControllerWithIdentifier("PlacesView") as! PlacesView
+        let leftMenuViewController = mainStoryboard.instantiateViewControllerWithIdentifier("Menu") as! Menu
+        
+        let leftSideNav = UINavigationController(rootViewController: leftMenuViewController)
+        let centerNav = UINavigationController(rootViewController: centerViewController)
+        
+        let centerContainer = MMDrawerController(centerViewController: centerNav, leftDrawerViewController: leftSideNav)
+        
+        centerContainer?.shadowRadius = 3.0
+        centerContainer?.setMaximumLeftDrawerWidth((appDelegate.window?.bounds.width)! - 55.0, animated: true, completion: nil)
+        
+        centerContainer!.openDrawerGestureModeMask = MMOpenDrawerGestureMode.PanningCenterView;
+        centerContainer!.closeDrawerGestureModeMask = MMCloseDrawerGestureMode.PanningCenterView;
+        
+        // Sets flag to TRUE for system to remember that user is logged in and iOS saves state
+        NSUserDefaults.standardUserDefaults().setBool(true, forKey: "isUserLoggedIn")
+        NSUserDefaults.standardUserDefaults().synchronize()
+        
+        appDelegate.centerContainer = centerContainer
+        
+        appDelegate.window!.rootViewController = centerContainer
+        appDelegate.window!.makeKeyAndVisible()
+        
+        
+    }
+    
+    
     @IBAction func buttonTapped(sender: UIButton) {
         
         switch (sender.titleLabel!.text!) {

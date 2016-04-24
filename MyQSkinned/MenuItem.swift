@@ -18,7 +18,7 @@ class MenuItem: UIControl {
     var label : UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont(name: "TitilliumWeb-Light", size: 17)
+        label.font = UIFont(name: "TitilliumWeb-Light", size: 19)
         return label
     }()
     

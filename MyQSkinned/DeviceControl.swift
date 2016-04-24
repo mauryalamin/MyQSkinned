@@ -27,6 +27,7 @@ class DeviceControl: UIView {
         let deviceNameLabel = UILabel()
         deviceNameLabel.translatesAutoresizingMaskIntoConstraints = false
         deviceNameLabel.font = UIFont(name: "OpenSans-Light", size: 29)
+        deviceNameLabel.minimumScaleFactor = 0.6
         deviceNameLabel.textColor = UIColor.whiteColor()
         deviceNameLabel.textAlignment = .Center
         return deviceNameLabel
@@ -78,7 +79,7 @@ class DeviceControl: UIView {
             placeNameLabel.topAnchor.constraintEqualToAnchor(topAnchor, constant: spacing),
             
             deviceNameLabel.widthAnchor.constraintEqualToAnchor(widthAnchor),
-            deviceNameLabel.heightAnchor.constraintEqualToConstant(38),
+            deviceNameLabel.heightAnchor.constraintEqualToConstant(36),
             deviceNameLabel.centerXAnchor.constraintEqualToAnchor(placeNameLabel.centerXAnchor),
             deviceNameLabel.topAnchor.constraintEqualToAnchor(placeNameLabel.bottomAnchor, constant: 4),
             
