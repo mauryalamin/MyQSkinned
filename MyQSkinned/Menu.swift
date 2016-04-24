@@ -23,6 +23,11 @@ class Menu: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBarHidden = true
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -50,6 +55,33 @@ class Menu: UIViewController {
         
         sender.buttonSelected()
         print("\(sender.label.text!)")
+        
+        switch (sender.label.text!) {
+        case "Places":
+            let centerViewController = self.storyboard?.instantiateViewControllerWithIdentifier("PlacesView") as! PlacesView
+            let centerNavController = UINavigationController(rootViewController: centerViewController)
+            let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            appDelegate.centerContainer!.centerViewController = centerNavController
+            appDelegate.centerContainer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil)
+            break
+        case "Manage Places":
+            let managePlacesView = self.storyboard?.instantiateViewControllerWithIdentifier("ManagePlaces") as! ManagePlaces
+            
+            let manageNavController = UINavigationController(rootViewController: managePlacesView)
+            
+            let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            
+            appDelegate.centerContainer!.centerViewController = manageNavController
+            appDelegate.centerContainer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil)
+            
+            break
+            
+            
+        default:
+            print("Nothing was tapped")
+        }
+        
+        
         
     }
     

@@ -16,6 +16,10 @@
 		AE32DDFF1CB9BA770063E92F /* Help.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE32DDFE1CB9BA770063E92F /* Help.swift */; };
 		AE5721EA1CA6FC360081AD35 /* CreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5721E91CA6FC360081AD35 /* CreateAccount.swift */; };
 		AE5721EC1CA6FC4F0081AD35 /* VerifyAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5721EB1CA6FC4F0081AD35 /* VerifyAccount.swift */; };
+		AE88AA501CCC0A8200628080 /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AE88AA481CCC0A8200628080 /* MMDrawerBarButtonItem.m */; };
+		AE88AA511CCC0A8200628080 /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE88AA4A1CCC0A8200628080 /* MMDrawerController.m */; };
+		AE88AA521CCC0A8200628080 /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = AE88AA4D1CCC0A8200628080 /* MMDrawerVisualState.m */; };
+		AE88AA531CCC0A8200628080 /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE88AA4F1CCC0A8200628080 /* UIViewController+MMDrawerController.m */; };
 		AE98DD281C95A50D0000AC40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE98DD271C95A50D0000AC40 /* AppDelegate.swift */; };
 		AE98DD2D1C95A50D0000AC40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE98DD2B1C95A50D0000AC40 /* Main.storyboard */; };
 		AE98DD2F1C95A50D0000AC40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE98DD2E1C95A50D0000AC40 /* Assets.xcassets */; };
@@ -74,6 +78,16 @@
 		AE32DDFE1CB9BA770063E92F /* Help.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Help.swift; sourceTree = "<group>"; };
 		AE5721E91CA6FC360081AD35 /* CreateAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccount.swift; sourceTree = "<group>"; };
 		AE5721EB1CA6FC4F0081AD35 /* VerifyAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyAccount.swift; sourceTree = "<group>"; };
+		AE88AA461CCC0A8200628080 /* MyQSkinned-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyQSkinned-Bridging-Header.h"; sourceTree = "<group>"; };
+		AE88AA471CCC0A8200628080 /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
+		AE88AA481CCC0A8200628080 /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
+		AE88AA491CCC0A8200628080 /* MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerController.h; sourceTree = "<group>"; };
+		AE88AA4A1CCC0A8200628080 /* MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerController.m; sourceTree = "<group>"; };
+		AE88AA4B1CCC0A8200628080 /* MMDrawerController+Subclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MMDrawerController+Subclass.h"; sourceTree = "<group>"; };
+		AE88AA4C1CCC0A8200628080 /* MMDrawerVisualState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerVisualState.h; sourceTree = "<group>"; };
+		AE88AA4D1CCC0A8200628080 /* MMDrawerVisualState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerVisualState.m; sourceTree = "<group>"; };
+		AE88AA4E1CCC0A8200628080 /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
+		AE88AA4F1CCC0A8200628080 /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
 		AE98DD241C95A50D0000AC40 /* MyQSkinned.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyQSkinned.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE98DD271C95A50D0000AC40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE98DD2C1C95A50D0000AC40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -134,6 +148,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE88AA451CCC090200628080 /* MMDrawerController */ = {
+			isa = PBXGroup;
+			children = (
+				AE88AA471CCC0A8200628080 /* MMDrawerBarButtonItem.h */,
+				AE88AA481CCC0A8200628080 /* MMDrawerBarButtonItem.m */,
+				AE88AA491CCC0A8200628080 /* MMDrawerController.h */,
+				AE88AA4A1CCC0A8200628080 /* MMDrawerController.m */,
+				AE88AA4B1CCC0A8200628080 /* MMDrawerController+Subclass.h */,
+				AE88AA4C1CCC0A8200628080 /* MMDrawerVisualState.h */,
+				AE88AA4D1CCC0A8200628080 /* MMDrawerVisualState.m */,
+				AE88AA4E1CCC0A8200628080 /* UIViewController+MMDrawerController.h */,
+				AE88AA4F1CCC0A8200628080 /* UIViewController+MMDrawerController.m */,
+				AE88AA461CCC0A8200628080 /* MyQSkinned-Bridging-Header.h */,
+			);
+			name = MMDrawerController;
+			sourceTree = "<group>";
+		};
 		AE98DD1B1C95A50D0000AC40 = {
 			isa = PBXGroup;
 			children = (
@@ -156,10 +187,12 @@
 			isa = PBXGroup;
 			children = (
 				AE98DD2B1C95A50D0000AC40 /* Main.storyboard */,
+				AE98DD271C95A50D0000AC40 /* AppDelegate.swift */,
 				AE98DD4F1C95A7970000AC40 /* View Controllers */,
 				AE98DD2E1C95A50D0000AC40 /* Assets.xcassets */,
 				AE98DD511C95A8920000AC40 /* Custom Controls */,
 				AE98DD501C95A87A0000AC40 /* Helper Classes */,
+				AE88AA451CCC090200628080 /* MMDrawerController */,
 				AE98DD521C95A8A90000AC40 /* Supporting Files */,
 			);
 			path = MyQSkinned;
@@ -215,7 +248,6 @@
 			isa = PBXGroup;
 			children = (
 				AE98DD531C95AA920000AC40 /* Fonts */,
-				AE98DD271C95A50D0000AC40 /* AppDelegate.swift */,
 				AE98DD301C95A50D0000AC40 /* LaunchScreen.storyboard */,
 				AE98DD331C95A50D0000AC40 /* Info.plist */,
 			);
@@ -297,7 +329,7 @@
 		AE98DD1C1C95A50D0000AC40 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = Alamin;
 				TargetAttributes = {
@@ -379,6 +411,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE88AA521CCC0A8200628080 /* MMDrawerVisualState.m in Sources */,
 				AE98DD4A1C95A6740000AC40 /* MenuItem.swift in Sources */,
 				AE0373881CA8638600E38B81 /* OnboardView.swift in Sources */,
 				AEF0927C1CAC7446005C3DEF /* DeviceControl.swift in Sources */,
@@ -387,11 +420,14 @@
 				AE98DD481C95A5BA0000AC40 /* UIImageView.swift in Sources */,
 				AE5721EC1CA6FC4F0081AD35 /* VerifyAccount.swift in Sources */,
 				AE32DDF71CB9BA010063E92F /* ManagePlaces.swift in Sources */,
+				AE88AA531CCC0A8200628080 /* UIViewController+MMDrawerController.m in Sources */,
 				AE0373861CA8635E00E38B81 /* OnboardSingleView.swift in Sources */,
 				AEF0927A1CAC73AD005C3DEF /* PlacesView.swift in Sources */,
 				AE32DDFF1CB9BA770063E92F /* Help.swift in Sources */,
+				AE88AA511CCC0A8200628080 /* MMDrawerController.m in Sources */,
 				AE32DDFD1CB9BA680063E92F /* History.swift in Sources */,
 				AE98DD281C95A50D0000AC40 /* AppDelegate.swift in Sources */,
+				AE88AA501CCC0A8200628080 /* MMDrawerBarButtonItem.m in Sources */,
 				AE98DD851C95ED180000AC40 /* Launch.swift in Sources */,
 				AE32DDFB1CB9BA490063E92F /* Rules.swift in Sources */,
 				AEF47D4D1CB5BC4A00F3FB91 /* TransparentNavigationController.swift in Sources */,
@@ -524,6 +560,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MyQSkinned/Info.plist;
@@ -531,6 +568,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.alamin.MyQSkinned;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyQSkinned/MyQSkinned-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -538,6 +577,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MyQSkinned/Info.plist;
@@ -545,6 +585,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.alamin.MyQSkinned;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyQSkinned/MyQSkinned-Bridging-Header.h";
 			};
 			name = Release;
 		};

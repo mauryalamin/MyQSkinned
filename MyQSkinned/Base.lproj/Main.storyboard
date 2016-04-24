@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yeo-Em-6pm">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -46,7 +46,7 @@
         <!--Places-->
         <scene sceneID="dbE-iG-mKT">
             <objects>
-                <viewController id="bmN-ay-IuL" customClass="PlacesView" customModule="MyQSkinned" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PlacesView" id="bmN-ay-IuL" customClass="PlacesView" customModule="MyQSkinned" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TUq-Ox-lje"/>
                         <viewControllerLayoutGuide type="bottom" id="KRz-IQ-SpI"/>
@@ -93,7 +93,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Places" id="WtD-d5-16i">
-                        <barButtonItem key="leftBarButtonItem" image="menuIcon" id="hy2-C9-5E9"/>
+                        <barButtonItem key="leftBarButtonItem" image="menuIcon" id="hy2-C9-5E9">
+                            <connections>
+                                <action selector="menuButton:" destination="bmN-ay-IuL" id="tXn-5x-6pP"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="addIcon" id="ANE-H5-82p"/>
                     </navigationItem>
                     <connections>
@@ -103,12 +107,48 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tmr-zW-l3c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-438" y="485"/>
+            <point key="canvasLocation" x="-476" y="485"/>
+        </scene>
+        <!--Manage Places-->
+        <scene sceneID="7F4-w9-S3w">
+            <objects>
+                <viewController storyboardIdentifier="ManagePlaces" id="Jei-1P-Sg4" customClass="ManagePlaces" customModule="MyQSkinned" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nTk-iM-HB6"/>
+                        <viewControllerLayoutGuide type="bottom" id="lz7-Po-cwo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UZO-40-Ptd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="basic-wallpaper2-sq" translatesAutoresizingMaskIntoConstraints="NO" id="WEV-Rz-s5w">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WEV-Rz-s5w" firstAttribute="top" secondItem="UZO-40-Ptd" secondAttribute="top" id="DUx-Hr-1Ek"/>
+                            <constraint firstItem="lz7-Po-cwo" firstAttribute="top" secondItem="WEV-Rz-s5w" secondAttribute="bottom" id="Knk-vR-eJ1"/>
+                            <constraint firstAttribute="trailing" secondItem="WEV-Rz-s5w" secondAttribute="trailing" id="ZXL-zJ-r6v"/>
+                            <constraint firstItem="WEV-Rz-s5w" firstAttribute="leading" secondItem="UZO-40-Ptd" secondAttribute="leading" id="qK0-Pn-Yfk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Manage Places" id="Uoq-Kl-72Q">
+                        <barButtonItem key="leftBarButtonItem" image="menuIcon" id="QOa-G5-55Q">
+                            <connections>
+                                <action selector="menuButton:" destination="Jei-1P-Sg4" id="yr5-6e-6AL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YFa-Dh-4M3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="44" y="-244"/>
         </scene>
         <!--Launch-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="Launch" customModule="MyQSkinned" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Launch" id="BYZ-38-t0r" customClass="Launch" customModule="MyQSkinned" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -293,7 +333,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="935" y="-292"/>
+            <point key="canvasLocation" x="1747" y="-292"/>
         </scene>
         <!--Sign Up-->
         <scene sceneID="359-Im-6jZ">
@@ -839,7 +879,7 @@
         <!--Menu-->
         <scene sceneID="Vdj-GS-DYt">
             <objects>
-                <viewController id="e8r-WU-nPj" customClass="Menu" customModule="MyQSkinned" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Menu" id="e8r-WU-nPj" customClass="Menu" customModule="MyQSkinned" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KrX-dZ-B6P"/>
                         <viewControllerLayoutGuide type="bottom" id="AEq-6e-AXr"/>
@@ -942,7 +982,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AV7-D3-9xS" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-82" y="-509"/>
+            <point key="canvasLocation" x="730" y="-509"/>
         </scene>
         <!--Transparent Navigation Controller-->
         <scene sceneID="Vml-h9-2Sy">
@@ -979,6 +1019,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KCR-Jy-QUn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="226" y="485"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sgc-ab-Hpj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qg9-2x-aY9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="h74-JS-J2M">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Jei-1P-Sg4" kind="relationship" relationship="rootViewController" id="jbt-Nb-rDE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xnV-M1-Y34" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-768" y="-244"/>
         </scene>
     </scenes>
     <resources>
