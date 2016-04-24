@@ -34,7 +34,7 @@ class ManagePlaces: UIViewController {
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         
         //Navigation bar customization
-        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : (UIFont(name: "TitilliumWeb-Regular", size: 18))!]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : (UIFont(name: "TitilliumWeb-Regular", size: 22))!]
     }
     
     @IBAction func menuButton(sender: UIBarButtonItem) {

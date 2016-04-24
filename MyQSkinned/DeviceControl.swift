@@ -16,7 +16,7 @@ class DeviceControl: UIView {
     var placeNameLabel : UILabel = {
         let placeNameLabel = UILabel()
         placeNameLabel.translatesAutoresizingMaskIntoConstraints = false
-        placeNameLabel.font = UIFont(name: "TitilliumWeb-Regular", size: 17)
+        placeNameLabel.font = UIFont(name: "TitilliumWeb-Regular", size: 20)
         placeNameLabel.textColor = UIColor.whiteColor()
         placeNameLabel.textAlignment = .Center
         return placeNameLabel
@@ -26,7 +26,7 @@ class DeviceControl: UIView {
     var deviceNameLabel : UILabel = {
         let deviceNameLabel = UILabel()
         deviceNameLabel.translatesAutoresizingMaskIntoConstraints = false
-        deviceNameLabel.font = UIFont(name: "OpenSans-Light", size: 25)
+        deviceNameLabel.font = UIFont(name: "OpenSans-Light", size: 29)
         deviceNameLabel.textColor = UIColor.whiteColor()
         deviceNameLabel.textAlignment = .Center
         return deviceNameLabel
@@ -36,7 +36,8 @@ class DeviceControl: UIView {
     var statusLabel : UILabel = {
         let statusLabel = UILabel()
         statusLabel.translatesAutoresizingMaskIntoConstraints = false
-        statusLabel.font = UIFont(name: "OpenSans", size: 13)
+        statusLabel.font = UIFont(name: "OpenSans", size: 16)
+        statusLabel.minimumScaleFactor = 0.6
         statusLabel.textColor = UIColor.whiteColor()
         statusLabel.textAlignment = .Center
         return statusLabel
@@ -72,21 +73,21 @@ class DeviceControl: UIView {
             // heightAnchor.constraintEqualToAnchor(widthAnchor, multiplier: 0.8),
             
             placeNameLabel.widthAnchor.constraintEqualToAnchor(widthAnchor),
-            placeNameLabel.heightAnchor.constraintEqualToConstant(22),
+            placeNameLabel.heightAnchor.constraintEqualToConstant(24),
             placeNameLabel.centerXAnchor.constraintEqualToAnchor(centerXAnchor),
             placeNameLabel.topAnchor.constraintEqualToAnchor(topAnchor, constant: spacing),
             
             deviceNameLabel.widthAnchor.constraintEqualToAnchor(widthAnchor),
-            deviceNameLabel.heightAnchor.constraintEqualToConstant(30),
+            deviceNameLabel.heightAnchor.constraintEqualToConstant(38),
             deviceNameLabel.centerXAnchor.constraintEqualToAnchor(placeNameLabel.centerXAnchor),
-            deviceNameLabel.topAnchor.constraintEqualToAnchor(placeNameLabel.bottomAnchor),
+            deviceNameLabel.topAnchor.constraintEqualToAnchor(placeNameLabel.bottomAnchor, constant: 4),
             
             deviceImageView.topAnchor.constraintEqualToAnchor(deviceNameLabel.bottomAnchor),
             deviceImageView.centerXAnchor.constraintEqualToAnchor(deviceNameLabel.centerXAnchor),
             deviceImageView.widthAnchor.constraintEqualToAnchor(widthAnchor, multiplier: 0.6),
-            deviceImageView.heightAnchor.constraintEqualToConstant(160),
+            deviceImageView.heightAnchor.constraintEqualToConstant(170),
             
-            statusLabel.widthAnchor.constraintEqualToAnchor(widthAnchor, multiplier: 0.5),
+            statusLabel.widthAnchor.constraintEqualToAnchor(widthAnchor, multiplier: 0.7),
             statusLabel.heightAnchor.constraintEqualToConstant(16),
             statusLabel.centerXAnchor.constraintEqualToAnchor(deviceImageView.centerXAnchor),
             statusLabel.topAnchor.constraintEqualToAnchor(deviceImageView.bottomAnchor),

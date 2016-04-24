@@ -21,6 +21,7 @@ class Menu: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        placesButton.buttonSelected()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -54,7 +55,7 @@ class Menu: UIViewController {
         helpButton.buttonUnselected()
         
         sender.buttonSelected()
-        print("\(sender.label.text!)")
+        // print("\(sender.label.text!)")
         
         switch (sender.label.text!) {
         case "Places":
@@ -66,17 +67,39 @@ class Menu: UIViewController {
             break
         case "Manage Places":
             let managePlacesView = self.storyboard?.instantiateViewControllerWithIdentifier("ManagePlaces") as! ManagePlaces
-            
             let manageNavController = UINavigationController(rootViewController: managePlacesView)
-            
             let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-            
             appDelegate.centerContainer!.centerViewController = manageNavController
             appDelegate.centerContainer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil)
-            
             break
-            
-            
+        case "Account":
+            let accountView = self.storyboard?.instantiateViewControllerWithIdentifier("Account") as! Account
+            let accountNavController = UINavigationController(rootViewController: accountView)
+            let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            appDelegate.centerContainer!.centerViewController = accountNavController
+            appDelegate.centerContainer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil)
+            break
+        case "Rules":
+            let rulesView = self.storyboard?.instantiateViewControllerWithIdentifier("Rules") as! Rules
+            let rulesNavController = UINavigationController(rootViewController: rulesView)
+            let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            appDelegate.centerContainer!.centerViewController = rulesNavController
+            appDelegate.centerContainer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil)
+            break
+        case "History":
+            let historyView = self.storyboard?.instantiateViewControllerWithIdentifier("History") as! History
+            let historyNavController = UINavigationController(rootViewController: historyView)
+            let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            appDelegate.centerContainer!.centerViewController = historyNavController
+            appDelegate.centerContainer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil)
+            break
+        case "Help":
+            let helpView = self.storyboard?.instantiateViewControllerWithIdentifier("Help") as! Help
+            let helpNavController = UINavigationController(rootViewController: helpView)
+            let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            appDelegate.centerContainer!.centerViewController = helpNavController
+            appDelegate.centerContainer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil)
+            break
         default:
             print("Nothing was tapped")
         }
