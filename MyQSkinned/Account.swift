@@ -10,6 +10,8 @@ import UIKit
 
 class Account: UIViewController {
     
+    let screenSize: CGRect = UIScreen.mainScreen().bounds
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,11 +36,20 @@ class Account: UIViewController {
         self.navigationController?.navigationBar.barStyle = UIBarStyle.Black
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         
-        //Navigation bar customization
-        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : (UIFont(name: "TitilliumWeb-Regular", size: 22))!]
+        let screenWidth = screenSize.width
         
-        // Nav Bar Button Item custom font
-        self.navigationItem.rightBarButtonItem!.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "TitilliumWeb-Regular", size: 18)!], forState: .Normal)
+        //Navigation bar customization
+        if screenWidth == 320 {
+            self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : (UIFont(name: "TitilliumWeb-Regular", size: 18))!]
+            // Nav Bar Button Item custom font
+            self.navigationItem.rightBarButtonItem!.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "TitilliumWeb-Light", size: 16)!], forState: .Normal)
+        } else {
+            self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : (UIFont(name: "TitilliumWeb-Regular", size: 22))!]
+            // Nav Bar Button Item custom font
+            self.navigationItem.rightBarButtonItem!.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "TitilliumWeb-Light", size: 20)!], forState: .Normal)
+        }
+        
+        
 
     }
     

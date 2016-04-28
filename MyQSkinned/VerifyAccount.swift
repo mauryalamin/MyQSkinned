@@ -12,6 +12,8 @@ class VerifyAccount: UIViewController {
 
     @IBOutlet weak var okButton: UIBarButtonItem!
     
+    let screenSize: CGRect = UIScreen.mainScreen().bounds
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,6 +25,19 @@ class VerifyAccount: UIViewController {
     override func viewWillAppear(animated: Bool) {
         
         self.navigationItem.hidesBackButton = true
+        
+        let screenWidth = screenSize.width
+        
+        //Navigation bar customization
+        if screenWidth == 320 {
+            // self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : (UIFont(name: "TitilliumWeb-Regular", size: 18))!]
+            // Nav Bar Button Item custom font
+            self.navigationItem.rightBarButtonItem!.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "TitilliumWeb-Light", size: 16)!], forState: .Normal)
+        } else {
+            // self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : (UIFont(name: "TitilliumWeb-Regular", size: 22))!]
+            // Nav Bar Button Item custom font
+            self.navigationItem.rightBarButtonItem!.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "TitilliumWeb-Light", size: 18)!], forState: .Normal)
+        }
         
     }
 

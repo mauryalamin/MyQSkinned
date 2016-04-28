@@ -9,6 +9,8 @@
 import UIKit
 
 class ManagePlaces: UIViewController {
+    
+    let screenSize: CGRect = UIScreen.mainScreen().bounds
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +27,8 @@ class ManagePlaces: UIViewController {
         super.viewWillAppear(animated)
         // self.navigationController?.navigationBarHidden = true
         
+        
+        
         // Set Nav Bar Invisible
         // navigationController.navigationBar.setBackgroundImage(image, forBarMetrics: .Default)
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "nav-bar-bkgd"), forBarMetrics: UIBarMetrics.Default)
@@ -34,8 +38,14 @@ class ManagePlaces: UIViewController {
         self.navigationController?.navigationBar.barStyle = UIBarStyle.Black
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         
+        let screenWidth = screenSize.width
+        
         //Navigation bar customization
-        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : (UIFont(name: "TitilliumWeb-Regular", size: 22))!]
+        if screenWidth == 320 {
+            self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : (UIFont(name: "TitilliumWeb-Regular", size: 18))!]
+        } else {
+            self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : (UIFont(name: "TitilliumWeb-Regular", size: 22))!]
+        }
     }
     
     @IBAction func menuButton(sender: UIBarButtonItem) {

@@ -9,6 +9,8 @@
 import UIKit
 
 class TransparentNavigationController: UINavigationController {
+    
+    let screenSize: CGRect = UIScreen.mainScreen().bounds
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +25,17 @@ class TransparentNavigationController: UINavigationController {
         self.navigationBar.tintColor = UIColor.whiteColor()
         
         //Navigation bar customization
-        self.navigationBar.titleTextAttributes = [NSFontAttributeName : (UIFont(name: "TitilliumWeb-Regular", size: 18))!]
+        
+        
+        let screenWidth = screenSize.width
+        
+        //Navigation bar customization
+        if screenWidth == 320 {
+            self.navigationBar.titleTextAttributes = [NSFontAttributeName : (UIFont(name: "TitilliumWeb-Regular", size: 18))!]
+        } else {
+            self.navigationBar.titleTextAttributes = [NSFontAttributeName : (UIFont(name: "TitilliumWeb-Regular", size: 22))!]
+        }
+
     }
 
     override func didReceiveMemoryWarning() {

@@ -12,6 +12,8 @@ class ManagePlacesTableViewController: UITableViewController {
     
     var places = [String]()
     var partnerDevices = [String]()
+    
+    let screenSize: CGRect = UIScreen.mainScreen().bounds
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,8 +36,14 @@ class ManagePlacesTableViewController: UITableViewController {
         self.navigationController?.navigationBar.barStyle = UIBarStyle.Black
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         
+        let screenWidth = screenSize.width
+        
         //Navigation bar customization
-        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : (UIFont(name: "TitilliumWeb-Regular", size: 22))!]
+        if screenWidth == 320 {
+            self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : (UIFont(name: "TitilliumWeb-Regular", size: 18))!]
+        } else {
+            self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : (UIFont(name: "TitilliumWeb-Regular", size: 22))!]
+        }
     }
 
     override func didReceiveMemoryWarning() {
