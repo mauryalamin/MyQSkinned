@@ -66,7 +66,7 @@ class Menu: UIViewController {
             appDelegate.centerContainer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil)
             break
         case "Manage Places":
-            let managePlacesView = self.storyboard?.instantiateViewControllerWithIdentifier("ManagePlaces") as! ManagePlaces
+            let managePlacesView = self.storyboard?.instantiateViewControllerWithIdentifier("ManagePlacesTableViewController") as! ManagePlacesTableViewController
             let manageNavController = UINavigationController(rootViewController: managePlacesView)
             let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
             appDelegate.centerContainer!.centerViewController = manageNavController

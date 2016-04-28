@@ -38,7 +38,6 @@ class Account: UIViewController {
         self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : (UIFont(name: "TitilliumWeb-Regular", size: 22))!]
         
         // Nav Bar Button Item custom font
-        // self.navigationItem.leftBarButtonItem!.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "TitilliumWeb-Regular", size: 18)!], forState: .Normal)
         self.navigationItem.rightBarButtonItem!.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "TitilliumWeb-Regular", size: 18)!], forState: .Normal)
 
     }

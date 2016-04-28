@@ -26,9 +26,10 @@ class ManagePlaces: UIViewController {
         // self.navigationController?.navigationBarHidden = true
         
         // Set Nav Bar Invisible
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.translucent = true
+        // navigationController.navigationBar.setBackgroundImage(image, forBarMetrics: .Default)
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "nav-bar-bkgd"), forBarMetrics: UIBarMetrics.Default)
+        // self.navigationController?.navigationBar.shadowImage = UIImage()
+        // self.navigationController?.navigationBar.translucent = true
         
         self.navigationController?.navigationBar.barStyle = UIBarStyle.Black
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()

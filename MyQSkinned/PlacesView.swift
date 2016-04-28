@@ -16,6 +16,9 @@ class PlacesView: UIViewController {
     private let deviceControl = DeviceControl()
     var devicesArray = [DeviceControl]()
     
+    let screenSize: CGRect = UIScreen.mainScreen().bounds
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,11 +39,17 @@ class PlacesView: UIViewController {
         NSLayoutConstraint.activateConstraints(horizontalConstraints)
         
         
+        
+        // print("The window is \(screenWidth) points wide")
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         // self.navigationController?.navigationBarHidden = true
+        
+        let screenWidth = screenSize.width
+        
+        
         
         // Set Nav Bar Invisible
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
@@ -51,7 +60,14 @@ class PlacesView: UIViewController {
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         
         //Navigation bar customization
-        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : (UIFont(name: "TitilliumWeb-Regular", size: 22))!]
+        if screenWidth == 320 {
+            self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : (UIFont(name: "TitilliumWeb-Regular", size: 18))!]
+        } else {
+            self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : (UIFont(name: "TitilliumWeb-Regular", size: 22))!]
+        }
+        
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
