@@ -24,7 +24,6 @@ class ManagePlacesTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        // places = ManagePlacesSection.managePlacesSections()
         
         places = ["My Home", "Lake House", "Paisley Park"]
         partnerDevices = ["Nest: Living Room", "Nest Cam", "Nest: Lake House"]
@@ -78,18 +77,30 @@ class ManagePlacesTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("EntryCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("EntryCell", forIndexPath: indexPath) as! CustomTableCell
 
         if indexPath.section == 0 {
             
-            cell.textLabel?.text = places[indexPath.row]
+            cell.label.text = places[indexPath.row]
             
         } else {
             
-            cell.textLabel?.text = partnerDevices[indexPath.row]
+            cell.label.text = partnerDevices[indexPath.row]
         }
         
         return cell
+    }
+    
+    @IBAction func menuButton(sender: UIBarButtonItem) {
+        
+        let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        appDelegate.centerContainer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil)
+    }
+    
+    override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        let header: UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView
+        let font = UIFont(name: "TitilliumWeb-Regular", size: 13)
+        header.textLabel?.font = font
     }
 
     /*
