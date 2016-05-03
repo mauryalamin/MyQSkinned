@@ -30,6 +30,7 @@
             <string>OpenSans</string>
             <string>OpenSans</string>
             <string>OpenSans</string>
+            <string>OpenSans</string>
         </mutableArray>
         <mutableArray key="TitilliumWeb-Light.ttf">
             <string>TitilliumWeb-Light</string>
@@ -143,6 +144,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="label" destination="lzc-eV-hpz" id="hbO-WV-FAj"/>
+                                    <segue destination="xNk-N9-5J8" kind="show" id="IMS-83-ig9"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -163,6 +165,52 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YMg-iz-lgE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="16" y="1233"/>
+        </scene>
+        <!--Detail Table View Controller-->
+        <scene sceneID="AI4-A2-dUd">
+            <objects>
+                <tableViewController id="xNk-N9-5J8" customClass="DetailTableViewController" customModule="MyQSkinned" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="52" sectionHeaderHeight="18" sectionFooterHeight="18" id="4Xg-2r-qNA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EntryCell" rowHeight="52" id="I1P-2x-qAc" customClass="CustomTableCell" customModule="MyQSkinned" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="113.5" width="600" height="52"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="I1P-2x-qAc" id="yXO-l7-1i9">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="51.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tpU-Lo-x4E">
+                                            <rect key="frame" x="16" y="13" width="436" height="26"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="436" id="Os2-Jf-lza"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="19"/>
+                                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="tpU-Lo-x4E" firstAttribute="centerY" secondItem="yXO-l7-1i9" secondAttribute="centerY" id="BFZ-NS-Ozu"/>
+                                        <constraint firstItem="tpU-Lo-x4E" firstAttribute="leading" secondItem="yXO-l7-1i9" secondAttribute="leadingMargin" constant="8" id="DPC-uM-6We"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="label2" destination="tpU-Lo-x4E" id="76A-cK-i8D"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="xNk-N9-5J8" id="lfV-xY-KrF"/>
+                            <outlet property="delegate" destination="xNk-N9-5J8" id="ub6-Fy-F0L"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sJ2-tf-51s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="16" y="1947"/>
         </scene>
         <!--Account-->
         <scene sceneID="Rf1-Fs-iK6">
@@ -208,6 +256,7 @@
         <!--Rules-->
         <scene sceneID="si9-Na-LS4">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KYG-jq-2ce" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="Rules" id="EUb-XV-f9c" customClass="Rules" customModule="MyQSkinned" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="k9B-Yd-E1i"/>
@@ -237,7 +286,6 @@
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KYG-jq-2ce" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1413" y="1233"/>
         </scene>

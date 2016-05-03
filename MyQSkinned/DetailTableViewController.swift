@@ -1,19 +1,20 @@
 //
-//  ManagePlacesTableViewController.swift
+//  DetailTableViewController.swift
 //  MyQSkinned
 //
-//  Created by Maury Alamin on 4/27/16.
+//  Created by Maury Alamin on 5/1/16.
 //  Copyright © 2016 Alamin. All rights reserved.
 //
 
 import UIKit
 
-class ManagePlacesTableViewController: UITableViewController {
-    
-    var places = [String]()
-    var partnerDevices = [String]()
+class DetailTableViewController: UITableViewController {
     
     let screenSize: CGRect = UIScreen.mainScreen().bounds
+    
+    var hubName: String = ""
+    var hub = [String]()
+    var attachedDevices = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,12 +25,15 @@ class ManagePlacesTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
+        hub.append(hubName)
         
-        places = ["My Home", "Lake House", "Paisley Park"]
-        partnerDevices = ["Nest: Home"]
+        attachedDevices = ["Garage Door 1", "Living Room Light", "Garage Door 2"]
+        // print("\(hubName)")
     }
     
     override func viewWillAppear(animated: Bool) {
+        
+        navigationItem.title = hubName
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "nav-bar-bkgd"), forBarMetrics: UIBarMetrics.Default)
         
         self.navigationController?.navigationBar.barStyle = UIBarStyle.Black
@@ -43,6 +47,13 @@ class ManagePlacesTableViewController: UITableViewController {
         } else {
             self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : (UIFont(name: "TitilliumWeb-Regular", size: 22))!]
         }
+        
+        
+        // let backButton = UIBarButtonItem(title: "Home/Return or nohing", style: .Plain, target: nil, action: nil)
+        // navigationItem.backBarButtonItem = backButton
+        // self.navigationController?.navigationBar.backIndicatorImage = UIImage(named: "backIcon")
+        // self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage(named: "backIcon")
+        // self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -60,48 +71,36 @@ class ManagePlacesTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         if section == 0 {
-            return places.count
+            return hub.count
         } else {
-            return partnerDevices.count
+            return attachedDevices.count
         }
-        
     }
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section == 0 {
-            return "MyQ Places"
+        if section == 1 {
+            return "Devices"
         } else {
-            return "Linked Partner Devices"
+            return ""
         }
     }
 
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> CustomTableCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("EntryCell", forIndexPath: indexPath) as! CustomTableCell
 
         if indexPath.section == 0 {
             
-            cell.label.text = places[indexPath.row]
+            cell.label2.text = hub[indexPath.row]
             
         } else {
             
-            cell.label.text = partnerDevices[indexPath.row]
+            cell.label2.text = attachedDevices[indexPath.row]
         }
-        
+
         return cell
     }
     
-    @IBAction func menuButton(sender: UIBarButtonItem) {
-        
-        let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        appDelegate.centerContainer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil)
-    }
-    
-    override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        let header: UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView
-        let font = UIFont(name: "TitilliumWeb-Regular", size: 13)
-        header.textLabel?.font = font
-    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -138,47 +137,14 @@ class ManagePlacesTableViewController: UITableViewController {
     }
     */
 
-    
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
-        let destinationView = segue.destinationViewController as! DetailTableViewController
-        
         // Pass the selected object to the new view controller.
-        if let indexPath = self.tableView.indexPathForSelectedRow {
-            var selectedRow = ""
-            
-            switch indexPath.section {
-            case 0:
-                selectedRow = places[indexPath.row]
-            default:
-                selectedRow = partnerDevices[indexPath.row]
-            }
-            
-            destinationView.hubName = selectedRow
-        }
-        
-        let screenWidth = screenSize.width
-        
-        //Navigation bar customization
-        // let backButton = UIBarButtonItem(title: "\(navigationItem.title!)", style: UIBarButtonItemStyle.Plain, target: self, action: nil)
-        let backButton = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Plain, target: self, action: nil)
-        
-        navigationController?.navigationBar.backIndicatorImage = UIImage(named: "backIcon")
-        navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage(named: "backIcon")
-        
-        if screenWidth == 320 {
-            // Nav Bar Button Item custom font
-            backButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "TitilliumWeb-Light", size: 16)!], forState: UIControlState.Normal)
-        } else {
-            // Nav Bar Button Item custom font
-            backButton.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "TitilliumWeb-Light", size: 18)!], forState: UIControlState.Normal)
-        }
-        
-        navigationItem.backBarButtonItem = backButton
     }
-    
+    */
 
 }
