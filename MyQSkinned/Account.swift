@@ -26,7 +26,7 @@ class Account: UIViewController {
         NSLayoutConstraint.activateConstraints([
             addNewDevice.widthAnchor.constraintEqualToAnchor(view.widthAnchor, multiplier: 0.7),
             addNewDevice.centerXAnchor.constraintEqualToAnchor(view.centerXAnchor),
-            addNewDevice.centerYAnchor.constraintEqualToAnchor(view.centerYAnchor),
+            addNewDevice.topAnchor.constraintEqualToAnchor(view.topAnchor),
             
         ])
     }

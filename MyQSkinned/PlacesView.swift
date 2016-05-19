@@ -16,7 +16,11 @@ class PlacesView: UIViewController {
     private let deviceControl = DeviceControl()
     var devicesArray = [DeviceControl]()
     
+    private let addNewDevice = AddNewDevice()
+    
     let screenSize: CGRect = UIScreen.mainScreen().bounds
+    
+    var devices = true
     
     
     override func viewDidLoad() {
@@ -26,25 +30,36 @@ class PlacesView: UIViewController {
         scrollView.pagingEnabled = true
         
         // TO DO: After JSON file import, new method would loop through each JSON object and create device instances on the fly
-        let deviceControl1 = configureAndAddDevice("GDO", placeName: "LAKE HOME", deviceName: "Garage Door", deviceIcon: "gdo-closed")
-        let deviceControl2 = configureAndAddDevice("LIGHT", placeName: "MY HOME", deviceName: "Front Light", deviceIcon: "light-on")
-        let deviceControl3 = configureAndAddDevice("THERMOSTAT", placeName: "MY HOME", deviceName: "Thermostat", deviceIcon: "therm-home")
         
-        let views = ["scrollView": scrollView, "deviceControl1": deviceControl1, "deviceControl2": deviceControl2, "deviceControl3": deviceControl3]
         
-        let verticalContraints = NSLayoutConstraint.constraintsWithVisualFormat("V:|[deviceControl1(==scrollView)]|", options: [], metrics: nil, views: views)
-        NSLayoutConstraint.activateConstraints(verticalContraints)
+        // if UserData.userData.hubs.count != 0 {
         
-        let horizontalConstraints = NSLayoutConstraint.constraintsWithVisualFormat("H:|[deviceControl1(==scrollView)][deviceControl2(==scrollView)][deviceControl3(==scrollView)]|", options: [.AlignAllTop, .AlignAllBottom], metrics: nil, views: views)
-        NSLayoutConstraint.activateConstraints(horizontalConstraints)
-        
-        if UserData.userData.hubs.count != 0 {
+        if devices {
             
-            // Start to configure devices
+            let deviceControl1 = configureAndAddDevice("GDO", placeName: "LAKE HOME", deviceName: "Garage Door", deviceIcon: "gdo-closed")
+            let deviceControl2 = configureAndAddDevice("LIGHT", placeName: "MY HOME", deviceName: "Front Light", deviceIcon: "light-on")
+            let deviceControl3 = configureAndAddDevice("THERMOSTAT", placeName: "MY HOME", deviceName: "Thermostat", deviceIcon: "therm-home")
+            
+            let views = ["scrollView": scrollView, "deviceControl1": deviceControl1, "deviceControl2": deviceControl2, "deviceControl3": deviceControl3]
+            
+            let verticalContraints = NSLayoutConstraint.constraintsWithVisualFormat("V:|[deviceControl1(==scrollView)]|", options: [], metrics: nil, views: views)
+            NSLayoutConstraint.activateConstraints(verticalContraints)
+            
+            let horizontalConstraints = NSLayoutConstraint.constraintsWithVisualFormat("H:|[deviceControl1(==scrollView)][deviceControl2(==scrollView)][deviceControl3(==scrollView)]|", options: [.AlignAllTop, .AlignAllBottom], metrics: nil, views: views)
+            NSLayoutConstraint.activateConstraints(horizontalConstraints)
             
         } else {
             
             // print("You have \(UserData.userData.hubs.count) devices")
+            addNewDevice.translatesAutoresizingMaskIntoConstraints = false
+            scrollView.addSubview(addNewDevice)
+            addNewDevice.addTarget(self, action: #selector(addTapped(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+            NSLayoutConstraint.activateConstraints([
+                addNewDevice.widthAnchor.constraintEqualToAnchor(view.widthAnchor, multiplier: 0.7),
+                addNewDevice.centerXAnchor.constraintEqualToAnchor(view.centerXAnchor),
+                addNewDevice.topAnchor.constraintEqualToAnchor(scrollView.topAnchor, constant: 20),
+                
+            ])
             
         }
     }
@@ -109,6 +124,12 @@ class PlacesView: UIViewController {
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return .LightContent
+    }
+    
+    func addTapped(sender: UIControl) {
+        
+        print("Tapped")
+        
     }
     
     
