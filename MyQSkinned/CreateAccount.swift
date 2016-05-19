@@ -54,7 +54,6 @@ class CreateAccount: UIViewController, UITextFieldDelegate {
         for field in textFields {
             
             field.delegate = self
-            
         }
         
         getInfoCheck.selected = true
@@ -80,8 +79,30 @@ class CreateAccount: UIViewController, UITextFieldDelegate {
             self.navigationItem.leftBarButtonItem!.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "TitilliumWeb-Light", size: 18)!], forState: .Normal)
         }
         
+        loadData()
     }
-
+    
+    func loadData() {
+        
+        firstName.text = UserData.userData.firstName
+        lastName.text = UserData.userData.lastName
+        acctEmail.text = UserData.userData.email
+        createPassword.text = UserData.userData.password
+        verifyPassword.text = UserData.userData.password
+        zipCode.text = UserData.userData.zipCode
+        
+    }
+    
+    func saveData() {
+        
+        UserData.userData.firstName = firstName.text!
+        UserData.userData.lastName = lastName.text!
+        UserData.userData.email = acctEmail.text!
+        UserData.userData.password = createPassword.text!
+        UserData.userData.zipCode = zipCode.text!
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -104,7 +125,6 @@ class CreateAccount: UIViewController, UITextFieldDelegate {
         } else {
             textField.resignFirstResponder()
         }
-        
         return true
         
     }
@@ -156,6 +176,17 @@ class CreateAccount: UIViewController, UITextFieldDelegate {
         
     }
     
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        
+        if segue.identifier == "SubmitForm" {
+            
+            saveData()
+            
+        }
+        
+    }
     
 }
 

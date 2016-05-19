@@ -38,9 +38,15 @@ class PlacesView: UIViewController {
         let horizontalConstraints = NSLayoutConstraint.constraintsWithVisualFormat("H:|[deviceControl1(==scrollView)][deviceControl2(==scrollView)][deviceControl3(==scrollView)]|", options: [.AlignAllTop, .AlignAllBottom], metrics: nil, views: views)
         NSLayoutConstraint.activateConstraints(horizontalConstraints)
         
-        
-        
-        // print("The window is \(screenWidth) points wide")
+        if UserData.userData.hubs.count != 0 {
+            
+            // Start to configure devices
+            
+        } else {
+            
+            // print("You have \(UserData.userData.hubs.count) devices")
+            
+        }
     }
     
     override func viewWillAppear(animated: Bool) {
