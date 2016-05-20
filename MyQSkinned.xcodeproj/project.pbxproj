@@ -60,6 +60,7 @@
 		AEAE8F481CD681A5009819D0 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAE8F471CD681A5009819D0 /* DetailTableViewController.swift */; };
 		AED9500A1CD3CC0E004FFB16 /* CustomTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED950091CD3CC0E004FFB16 /* CustomTableCell.swift */; };
 		AEEB0A781CEE15BC00660DF4 /* AddNewDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEB0A771CEE15BC00660DF4 /* AddNewDevice.swift */; };
+		AEEB0A7A1CEEA69A00660DF4 /* AddNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEB0A791CEEA69A00660DF4 /* AddNewView.swift */; };
 		AEF0927A1CAC73AD005C3DEF /* PlacesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF092791CAC73AD005C3DEF /* PlacesView.swift */; };
 		AEF0927C1CAC7446005C3DEF /* DeviceControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF0927B1CAC7446005C3DEF /* DeviceControl.swift */; };
 		AEF47D4D1CB5BC4A00F3FB91 /* TransparentNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF47D4C1CB5BC4A00F3FB91 /* TransparentNavigationController.swift */; };
@@ -139,6 +140,7 @@
 		AEAE8F471CD681A5009819D0 /* DetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
 		AED950091CD3CC0E004FFB16 /* CustomTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableCell.swift; sourceTree = "<group>"; };
 		AEEB0A771CEE15BC00660DF4 /* AddNewDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewDevice.swift; sourceTree = "<group>"; };
+		AEEB0A791CEEA69A00660DF4 /* AddNewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewView.swift; sourceTree = "<group>"; };
 		AEF092791CAC73AD005C3DEF /* PlacesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesView.swift; sourceTree = "<group>"; };
 		AEF0927B1CAC7446005C3DEF /* DeviceControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceControl.swift; sourceTree = "<group>"; };
 		AEF47D4C1CB5BC4A00F3FB91 /* TransparentNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransparentNavigationController.swift; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 				AE5721EB1CA6FC4F0081AD35 /* VerifyAccount.swift */,
 				AE0373871CA8638600E38B81 /* OnboardView.swift */,
 				AE0373851CA8635E00E38B81 /* OnboardSingleView.swift */,
+				AEEB0A791CEEA69A00660DF4 /* AddNewView.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 				AED9500A1CD3CC0E004FFB16 /* CustomTableCell.swift in Sources */,
 				AE0373861CA8635E00E38B81 /* OnboardSingleView.swift in Sources */,
 				AEAE8F481CD681A5009819D0 /* DetailTableViewController.swift in Sources */,
+				AEEB0A7A1CEEA69A00660DF4 /* AddNewView.swift in Sources */,
 				AEF0927A1CAC73AD005C3DEF /* PlacesView.swift in Sources */,
 				AE32DDFF1CB9BA770063E92F /* Help.swift in Sources */,
 				AE88AA511CCC0A8200628080 /* MMDrawerController.m in Sources */,

@@ -31,6 +31,7 @@
             <string>OpenSans</string>
             <string>OpenSans</string>
             <string>OpenSans</string>
+            <string>OpenSans</string>
         </mutableArray>
         <mutableArray key="TitilliumWeb-Light.ttf">
             <string>TitilliumWeb-Light</string>
@@ -100,7 +101,11 @@
                                 <action selector="menuButton:" destination="bmN-ay-IuL" id="tXn-5x-6pP"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="addIcon" id="ANE-H5-82p"/>
+                        <barButtonItem key="rightBarButtonItem" image="addIcon" id="ANE-H5-82p">
+                            <connections>
+                                <action selector="addNewItem:" destination="bmN-ay-IuL" id="2ZV-YM-tSS"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="pageControl" destination="qPn-Gz-PDC" id="VgS-oz-X85"/>
@@ -110,6 +115,65 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tmr-zW-l3c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-680" y="1233"/>
+        </scene>
+        <!--Add New Device-->
+        <scene sceneID="XMD-0n-4wt">
+            <objects>
+                <tableViewController id="fRw-hr-YYw" customClass="AddNewView" customModule="MyQSkinned" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="dpf-3W-bpf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EntryCell" rowHeight="52" id="UAb-0v-WOP" customClass="CustomTableCell" customModule="MyQSkinned" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="113.5" width="600" height="52"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UAb-0v-WOP" id="b6N-F7-BV6">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="51.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDZ-qR-qcy">
+                                            <rect key="frame" x="16" y="13" width="436" height="26"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="436" id="cOp-f2-yb4"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="19"/>
+                                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="detailDisclosure" translatesAutoresizingMaskIntoConstraints="NO" id="W6e-5Z-qNn">
+                                            <rect key="frame" x="567" y="13.5" width="25" height="25"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="25" id="DyH-NP-zqI"/>
+                                                <constraint firstAttribute="height" constant="25" id="gPT-dw-0QK"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="W6e-5Z-qNn" firstAttribute="centerY" secondItem="b6N-F7-BV6" secondAttribute="centerY" id="2ig-gc-uOD"/>
+                                        <constraint firstItem="W6e-5Z-qNn" firstAttribute="trailing" secondItem="b6N-F7-BV6" secondAttribute="trailingMargin" id="FiS-CN-IvC"/>
+                                        <constraint firstItem="lDZ-qR-qcy" firstAttribute="leading" secondItem="b6N-F7-BV6" secondAttribute="leadingMargin" constant="8" id="Ukj-Ni-Oe7"/>
+                                        <constraint firstItem="lDZ-qR-qcy" firstAttribute="centerY" secondItem="b6N-F7-BV6" secondAttribute="centerY" id="pUm-qb-AG8"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="detailDisclosure" destination="W6e-5Z-qNn" id="a0B-Qu-N6M"/>
+                                    <outlet property="label" destination="lDZ-qR-qcy" id="ZA8-GZ-ie7"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="fRw-hr-YYw" id="lGz-OE-b3f"/>
+                            <outlet property="delegate" destination="fRw-hr-YYw" id="ZJa-Cw-7YB"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Add New Device" id="l28-XH-NrQ"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RJI-dx-LqW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-680" y="2007"/>
         </scene>
         <!--Manage Places-->
         <scene sceneID="oNb-Xa-iDk">
@@ -144,7 +208,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="label" destination="lzc-eV-hpz" id="hbO-WV-FAj"/>
-                                    <segue destination="xNk-N9-5J8" kind="show" id="IMS-83-ig9"/>
+                                    <segue destination="xNk-N9-5J8" kind="show" identifier="DetailViewSegue" id="IMS-83-ig9"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -159,14 +223,18 @@
                                 <action selector="menuButton:" destination="8Dx-EH-XCH" id="raR-1x-wIe"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="addIcon" id="mHY-KX-00N"/>
+                        <barButtonItem key="rightBarButtonItem" image="addIcon" id="mHY-KX-00N">
+                            <connections>
+                                <segue destination="fRw-hr-YYw" kind="show" identifier="AddNewSegue" id="Kob-X4-6MH"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YMg-iz-lgE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="16" y="1233"/>
         </scene>
-        <!--Detail Table View Controller-->
+        <!--Detail Scene-->
         <scene sceneID="AI4-A2-dUd">
             <objects>
                 <tableViewController id="xNk-N9-5J8" customClass="DetailTableViewController" customModule="MyQSkinned" customModuleProvider="target" sceneMemberID="viewController">
@@ -191,14 +259,26 @@
                                             <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="detailDisclosure" translatesAutoresizingMaskIntoConstraints="NO" id="Fsk-7X-dwV">
+                                            <rect key="frame" x="567" y="13.5" width="25" height="25"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="25" id="Wr6-cR-hXx"/>
+                                                <constraint firstAttribute="height" constant="25" id="vJW-Uz-jL3"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="tpU-Lo-x4E" firstAttribute="centerY" secondItem="yXO-l7-1i9" secondAttribute="centerY" id="BFZ-NS-Ozu"/>
                                         <constraint firstItem="tpU-Lo-x4E" firstAttribute="leading" secondItem="yXO-l7-1i9" secondAttribute="leadingMargin" constant="8" id="DPC-uM-6We"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Fsk-7X-dwV" secondAttribute="trailing" id="LcU-BC-b0Q"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <constraints>
+                                    <constraint firstItem="Fsk-7X-dwV" firstAttribute="centerY" secondItem="I1P-2x-qAc" secondAttribute="centerY" id="UyK-Gc-8CT"/>
+                                </constraints>
                                 <connections>
-                                    <outlet property="label2" destination="tpU-Lo-x4E" id="76A-cK-i8D"/>
+                                    <outlet property="detailDisclosure" destination="Fsk-7X-dwV" id="oXO-RW-OYP"/>
+                                    <outlet property="label" destination="tpU-Lo-x4E" id="4qd-Gu-H8e"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -207,10 +287,13 @@
                             <outlet property="delegate" destination="xNk-N9-5J8" id="ub6-Fy-F0L"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Detail Scene" id="qhy-p3-Gaf">
+                        <barButtonItem key="rightBarButtonItem" image="addIcon" id="5JE-7z-Qjf"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sJ2-tf-51s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="16" y="1947"/>
+            <point key="canvasLocation" x="16" y="2007"/>
         </scene>
         <!--Account-->
         <scene sceneID="Rf1-Fs-iK6">
@@ -937,7 +1020,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please check your junk/spam folder for the MyQ verification email if it’s not in your inbox." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BO5-qE-BXs">
-                                <rect key="frame" x="20" y="143" width="560" height="38.5"/>
+                                <rect key="frame" x="20" y="144" width="560" height="38.5"/>
                                 <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -1338,6 +1421,7 @@
         <image name="checkbox-selected" width="10" height="10"/>
         <image name="checkbox-unselected" width="10" height="10"/>
         <image name="closeButton" width="30" height="30"/>
+        <image name="detailDisclosure" width="25" height="25"/>
         <image name="help-icon" width="26" height="26"/>
         <image name="history-icon" width="26" height="26"/>
         <image name="manage-places" width="26" height="26"/>

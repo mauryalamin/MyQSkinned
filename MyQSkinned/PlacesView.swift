@@ -50,17 +50,16 @@ class PlacesView: UIViewController {
             
         } else {
             
-            // print("You have \(UserData.userData.hubs.count) devices")
             addNewDevice.translatesAutoresizingMaskIntoConstraints = false
             scrollView.addSubview(addNewDevice)
             addNewDevice.addTarget(self, action: #selector(addTapped(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+            
             NSLayoutConstraint.activateConstraints([
                 addNewDevice.widthAnchor.constraintEqualToAnchor(view.widthAnchor, multiplier: 0.7),
-                addNewDevice.centerXAnchor.constraintEqualToAnchor(view.centerXAnchor),
+                addNewDevice.centerXAnchor.constraintEqualToAnchor(scrollView.centerXAnchor),
                 addNewDevice.topAnchor.constraintEqualToAnchor(scrollView.topAnchor, constant: 20),
                 
             ])
-            
         }
     }
     
@@ -91,10 +90,34 @@ class PlacesView: UIViewController {
         
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func addNewItem(sender: UIBarButtonItem) {
+        let actionMenu = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
+        
+        let newDevice = UIAlertAction(title: "Add a Device", style: .Default, handler: {
+            (alert: UIAlertAction!) -> Void in
+            print("Add Device")
+        })
+        let newAlert = UIAlertAction(title: "Add an Alert", style: .Default, handler: {
+            (alert: UIAlertAction!) -> Void in
+            print("Add Alert")
+        })
+        let newSchedule = UIAlertAction(title: "Add a Scheduled Event", style: .Default, handler: {
+            (alert: UIAlertAction!) -> Void in
+            print("Add Event")
+        })
+        let cancelNew = UIAlertAction(title: "Cancel", style: .Cancel, handler: {
+            (alert: UIAlertAction!) -> Void in
+            print("Cancelled")
+        })
+        
+        actionMenu.addAction(newDevice)
+        actionMenu.addAction(newAlert)
+        actionMenu.addAction(newSchedule)
+        actionMenu.addAction(cancelNew)
+        
+        self.presentViewController(actionMenu, animated: true, completion: nil)
     }
+    
     
     @IBAction func menuButton(sender: UIBarButtonItem) {
         
@@ -130,6 +153,11 @@ class PlacesView: UIViewController {
         
         print("Tapped")
         
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
     

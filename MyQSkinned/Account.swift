@@ -13,7 +13,7 @@ class Account: UIViewController {
     let screenSize: CGRect = UIScreen.mainScreen().bounds
     
     //TO DELETE
-    private let addNewDevice = AddNewDevice()
+    // private let addNewDevice = AddNewDevice()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +21,7 @@ class Account: UIViewController {
         // Do any additional setup after loading the view.
         
         //TO DELETE
+        /*
         view.addSubview(addNewDevice)
         addNewDevice.addTarget(self, action: #selector(addTapped(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         NSLayoutConstraint.activateConstraints([
@@ -29,14 +30,17 @@ class Account: UIViewController {
             addNewDevice.topAnchor.constraintEqualToAnchor(view.topAnchor),
             
         ])
+         */
     }
     
     //TO DELETE
+    /*
     func addTapped(sender: UIControl) {
         
         print("Tapped")
         
     }
+     */
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

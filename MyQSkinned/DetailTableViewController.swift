@@ -12,28 +12,28 @@ class DetailTableViewController: UITableViewController {
     
     let screenSize: CGRect = UIScreen.mainScreen().bounds
     
-    var hubName: String = ""
+    var hubObject = Hub()
     var hub = [String]()
     var attachedDevices = [String]()
+    
+    var accessories = [Accessory]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        hub.append(hubObject.name!)
+        accessories = hubObject.accessories
         
-        hub.append(hubName)
-        
-        attachedDevices = ["Garage Door 1", "Living Room Light", "Garage Door 2"]
-        // print("\(hubName)")
+        for accessory in accessories {
+            
+            attachedDevices.append(accessory.name!)
+            
+        }
     }
     
     override func viewWillAppear(animated: Bool) {
         
-        navigationItem.title = hubName
+        navigationItem.title = hubObject.name
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "nav-bar-bkgd"), forBarMetrics: UIBarMetrics.Default)
         
         self.navigationController?.navigationBar.barStyle = UIBarStyle.Black
@@ -91,11 +91,12 @@ class DetailTableViewController: UITableViewController {
 
         if indexPath.section == 0 {
             
-            cell.label2.text = hub[indexPath.row]
+            cell.label.text = hub[indexPath.row]
+            cell.detailDisclosure.hidden = true
             
         } else {
             
-            cell.label2.text = attachedDevices[indexPath.row]
+            cell.label.text = attachedDevices[indexPath.row]
         }
 
         return cell
