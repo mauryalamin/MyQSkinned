@@ -31,10 +31,8 @@ class ManagePlacesTableViewController: UITableViewController {
             let string = hub.type
             
             if (string?.rangeOfString("MyQ")) != nil {
-                // print("\(hub.name!) is of type: MyQ")
                 places.append(hub.name!)
             } else {
-                // print("\(hub.name!) is of type: Other")
                 partnerDevices.append(hub.name!)
             }
             
@@ -144,12 +142,8 @@ class ManagePlacesTableViewController: UITableViewController {
                         destinationView.hubObject = hub
                         
                     }
-                    
                 }
-                
             }
-            
-            
         }
         
         let screenWidth = screenSize.width

@@ -48,7 +48,6 @@ class DetailTableViewController: UITableViewController {
             self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : (UIFont(name: "TitilliumWeb-Regular", size: 22))!]
         }
         
-        
         // let backButton = UIBarButtonItem(title: "Home/Return or nohing", style: .Plain, target: nil, action: nil)
         // navigationItem.backBarButtonItem = backButton
         // self.navigationController?.navigationBar.backIndicatorImage = UIImage(named: "backIcon")

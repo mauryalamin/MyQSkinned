@@ -119,7 +119,7 @@
         <!--Add New Device-->
         <scene sceneID="XMD-0n-4wt">
             <objects>
-                <tableViewController id="fRw-hr-YYw" customClass="AddNewView" customModule="MyQSkinned" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="AddNewView" id="fRw-hr-YYw" customClass="AddNewView" customModule="MyQSkinned" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="dpf-3W-bpf">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -237,7 +237,7 @@
         <!--Detail Scene-->
         <scene sceneID="AI4-A2-dUd">
             <objects>
-                <tableViewController id="xNk-N9-5J8" customClass="DetailTableViewController" customModule="MyQSkinned" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="DetailTableViewController" id="xNk-N9-5J8" customClass="DetailTableViewController" customModule="MyQSkinned" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="52" sectionHeaderHeight="18" sectionFooterHeight="18" id="4Xg-2r-qNA">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -637,7 +637,7 @@
         <!--Sign Up-->
         <scene sceneID="359-Im-6jZ">
             <objects>
-                <viewController id="LW1-fC-XAC" customClass="CreateAccount" customModule="MyQSkinned" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreateAccount" id="LW1-fC-XAC" customClass="CreateAccount" customModule="MyQSkinned" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VVa-jQ-7Pm"/>
                         <viewControllerLayoutGuide type="bottom" id="Hak-1w-Lcx"/>
@@ -1000,7 +1000,7 @@
         <!--Verify Your Email-->
         <scene sceneID="g8K-xF-aDQ">
             <objects>
-                <viewController id="jyO-mI-gSQ" customClass="VerifyAccount" customModule="MyQSkinned" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VerifyAccount" id="jyO-mI-gSQ" customClass="VerifyAccount" customModule="MyQSkinned" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yQI-4V-uAp"/>
                         <viewControllerLayoutGuide type="bottom" id="Yvg-Os-6Yv"/>
@@ -1122,7 +1122,7 @@
         <!--Onboard View-->
         <scene sceneID="ybC-5d-rcn">
             <objects>
-                <viewController id="A34-pl-IOM" customClass="OnboardView" customModule="MyQSkinned" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OnboardView" id="A34-pl-IOM" customClass="OnboardView" customModule="MyQSkinned" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4II-2u-uXI"/>
                         <viewControllerLayoutGuide type="bottom" id="4rT-vA-Qsj"/>

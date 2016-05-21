@@ -10,18 +10,16 @@ import UIKit
 
 class PlacesView: UIViewController {
     
+    // MARK: - Storyboard Outlets
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
     
-    private let deviceControl = DeviceControl()
+    // MARK: - Class Properties
+    var currentHubs = UserData.userData.hubs
     var devicesArray = [DeviceControl]()
-    
     private let addNewDevice = AddNewDevice()
     
     let screenSize: CGRect = UIScreen.mainScreen().bounds
-    
-    var devices = true
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,25 +27,46 @@ class PlacesView: UIViewController {
         // Do any additional setup after loading the view.
         scrollView.pagingEnabled = true
         
-        // TO DO: After JSON file import, new method would loop through each JSON object and create device instances on the fly
+        var views: [String: UIView] = [ : ]
+        views["scrollView"] = scrollView
         
+        var deviceViews: [String: UIView] = [ : ]
         
-        // if UserData.userData.hubs.count != 0 {
-        
-        if devices {
+        if currentHubs.count != 0 {
             
-            let deviceControl1 = configureAndAddDevice("GDO", placeName: "LAKE HOME", deviceName: "Garage Door", deviceIcon: "gdo-closed")
-            let deviceControl2 = configureAndAddDevice("LIGHT", placeName: "MY HOME", deviceName: "Front Light", deviceIcon: "light-on")
-            let deviceControl3 = configureAndAddDevice("THERMOSTAT", placeName: "MY HOME", deviceName: "Thermostat", deviceIcon: "therm-home")
+            var i = 0
             
-            let views = ["scrollView": scrollView, "deviceControl1": deviceControl1, "deviceControl2": deviceControl2, "deviceControl3": deviceControl3]
+            for hub in currentHubs {
+                for accessory in hub.accessories {
+                    // print("device: \(accessory.type!)")
+                    
+                    let device = configureAndAddDevice(accessory.type!, placeName: hub.name!, deviceName: accessory.name!, deviceIcon: accessory.icon!)
+                    // print("Place Name: \(hub.name!), Device Name: \(accessory.name!)")
+                    views ["deviceControl\(i)"] = device
+                    deviceViews ["deviceControl\(i)"] = device
+                    i += 1
+                }
+            }
             
-            let verticalContraints = NSLayoutConstraint.constraintsWithVisualFormat("V:|[deviceControl1(==scrollView)]|", options: [], metrics: nil, views: views)
+            let verticalContraints = NSLayoutConstraint.constraintsWithVisualFormat("V:|[deviceControl0(==scrollView)]|", options: [], metrics: nil, views: views)
             NSLayoutConstraint.activateConstraints(verticalContraints)
             
-            let horizontalConstraints = NSLayoutConstraint.constraintsWithVisualFormat("H:|[deviceControl1(==scrollView)][deviceControl2(==scrollView)][deviceControl3(==scrollView)]|", options: [.AlignAllTop, .AlignAllBottom], metrics: nil, views: views)
-            NSLayoutConstraint.activateConstraints(horizontalConstraints)
+            var horizontalString = "H:|"
             
+            for key in deviceViews.keys {
+                
+                let stringPortion = "[\(key)(==scrollView)]"
+                
+                horizontalString += stringPortion
+                
+            }
+            
+            horizontalString += "|"
+            
+            pageControl.numberOfPages = devicesArray.count
+            
+            let horizontalConstraints = NSLayoutConstraint.constraintsWithVisualFormat(horizontalString, options: [.AlignAllTop, .AlignAllBottom], metrics: nil, views: views)
+            NSLayoutConstraint.activateConstraints(horizontalConstraints)
         } else {
             
             addNewDevice.translatesAutoresizingMaskIntoConstraints = false
@@ -59,37 +78,11 @@ class PlacesView: UIViewController {
                 addNewDevice.centerXAnchor.constraintEqualToAnchor(scrollView.centerXAnchor),
                 addNewDevice.topAnchor.constraintEqualToAnchor(scrollView.topAnchor, constant: 20),
                 
-            ])
+                ])
         }
     }
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        // self.navigationController?.navigationBarHidden = true
-        
-        let screenWidth = screenSize.width
-        
-        
-        
-        // Set Nav Bar Invisible
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.translucent = true
-        
-        self.navigationController?.navigationBar.barStyle = UIBarStyle.Black
-        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
-        
-        //Navigation bar customization
-        if screenWidth == 320 {
-            self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : (UIFont(name: "TitilliumWeb-Regular", size: 18))!]
-        } else {
-            self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : (UIFont(name: "TitilliumWeb-Regular", size: 22))!]
-        }
-        
-        
-        
-    }
-    
+    // MARK: - Button Actions
     @IBAction func addNewItem(sender: UIBarButtonItem) {
         let actionMenu = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
         
@@ -118,7 +111,6 @@ class PlacesView: UIViewController {
         self.presentViewController(actionMenu, animated: true, completion: nil)
     }
     
-    
     @IBAction func menuButton(sender: UIBarButtonItem) {
         
         let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -126,6 +118,11 @@ class PlacesView: UIViewController {
         
     }
     
+    func addTapped(sender: UIControl) {
+        print("Tapped")
+    }
+    
+    // MARK: - Configuration Methods
     private func configureAndAddDevice(type: String, placeName: String, deviceName: String, deviceIcon: String) -> DeviceControl {
         
         let deviceControl = DeviceControl()
@@ -145,25 +142,43 @@ class PlacesView: UIViewController {
         
     }
     
+    // MARK: - Custom Visuals
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        // self.navigationController?.navigationBarHidden = true
+        
+        let screenWidth = screenSize.width
+        
+        // Set Nav Bar Invisible
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.translucent = true
+        
+        self.navigationController?.navigationBar.barStyle = UIBarStyle.Black
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        
+        //Navigation bar customization
+        if screenWidth == 320 {
+            self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : (UIFont(name: "TitilliumWeb-Regular", size: 18))!]
+        } else {
+            self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : (UIFont(name: "TitilliumWeb-Regular", size: 22))!]
+        }
+    }
+    
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return .LightContent
     }
     
-    func addTapped(sender: UIControl) {
-        
-        print("Tapped")
-        
-    }
-    
+    // MARK: - House Cleaning
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    
 }
 
 
+// MARK: - Extensions
 extension PlacesView: UIScrollViewDelegate {
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
