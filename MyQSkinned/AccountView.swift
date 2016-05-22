@@ -11,15 +11,17 @@ import UIKit
 class AccountView: UITableViewController {
     
     let screenSize: CGRect = UIScreen.mainScreen().bounds
+    
+    let firstName = UserData.userData.firstName
+    let lastName = UserData.userData.lastName
+    let email = UserData.userData.email
+    
+    var tableTitles = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        tableTitles = ["", "Edit Info", "Account Linking", "Change Password", "Security", "Password"]
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,19 +37,39 @@ class AccountView: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        
+        return tableTitles.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
-        return cell
+        
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCellWithIdentifier("AccountCell", forIndexPath: indexPath) as! CustomDetailCell
+            
+            if let optionalFirst = firstName {
+                if let optionalLast = lastName {
+                    if let optionalEmail = email {
+                        
+                        cell.label.text = "\(optionalFirst) \(optionalLast)"
+                        cell.detailLabel.text = "\(optionalEmail)"
+                        
+                    }
+                }
+            }
+            
+            return cell
+            
+        } else {
+            let cell = tableView.dequeueReusableCellWithIdentifier("EntryCell", forIndexPath: indexPath) as! CustomTableCell
+            
+            cell.label.text = tableTitles[indexPath.row]
+            
+            return cell
+        }
+        
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

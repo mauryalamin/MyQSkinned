@@ -20,6 +20,7 @@
 		AE59E1461CD16DED00EA98EA /* ManagePlacesSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE59E1451CD16DED00EA98EA /* ManagePlacesSection.swift */; };
 		AE6DF06E1CF210D80067EE98 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6DF06D1CF210D80067EE98 /* HelpView.swift */; };
 		AE6DF0701CF21C9E0067EE98 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6DF06F1CF21C9E0067EE98 /* AccountView.swift */; };
+		AE6DF0721CF2245B0067EE98 /* CustomDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6DF0711CF2245B0067EE98 /* CustomDetailCell.swift */; };
 		AE88AA501CCC0A8200628080 /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AE88AA481CCC0A8200628080 /* MMDrawerBarButtonItem.m */; };
 		AE88AA511CCC0A8200628080 /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE88AA4A1CCC0A8200628080 /* MMDrawerController.m */; };
 		AE88AA521CCC0A8200628080 /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = AE88AA4D1CCC0A8200628080 /* MMDrawerVisualState.m */; };
@@ -90,6 +91,7 @@
 		AE59E1451CD16DED00EA98EA /* ManagePlacesSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagePlacesSection.swift; sourceTree = "<group>"; };
 		AE6DF06D1CF210D80067EE98 /* HelpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
 		AE6DF06F1CF21C9E0067EE98 /* AccountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		AE6DF0711CF2245B0067EE98 /* CustomDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDetailCell.swift; sourceTree = "<group>"; };
 		AE88AA461CCC0A8200628080 /* MyQSkinned-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyQSkinned-Bridging-Header.h"; sourceTree = "<group>"; };
 		AE88AA471CCC0A8200628080 /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
 		AE88AA481CCC0A8200628080 /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
@@ -215,12 +217,12 @@
 				AE98DD2B1C95A50D0000AC40 /* Main.storyboard */,
 				AE98DD271C95A50D0000AC40 /* AppDelegate.swift */,
 				AE98DD4F1C95A7970000AC40 /* View Controllers */,
-				AE98DD2E1C95A50D0000AC40 /* Assets.xcassets */,
 				AE98DD511C95A8920000AC40 /* Custom Controls */,
 				AE98DD501C95A87A0000AC40 /* Helper Classes */,
 				AE88AA451CCC090200628080 /* MMDrawerController */,
 				AE0F113B1CED1C270052568D /* Data */,
 				AE98DD521C95A8A90000AC40 /* Supporting Files */,
+				AE98DD2E1C95A50D0000AC40 /* Assets.xcassets */,
 			);
 			path = MyQSkinned;
 			sourceTree = "<group>";
@@ -272,6 +274,7 @@
 				AE98DD491C95A6740000AC40 /* MenuItem.swift */,
 				AEF0927B1CAC7446005C3DEF /* DeviceControl.swift */,
 				AEEB0A771CEE15BC00660DF4 /* AddNewDevice.swift */,
+				AE6DF0711CF2245B0067EE98 /* CustomDetailCell.swift */,
 			);
 			name = "Custom Controls";
 			sourceTree = "<group>";
@@ -460,6 +463,7 @@
 				AED9500A1CD3CC0E004FFB16 /* CustomTableCell.swift in Sources */,
 				AE0373861CA8635E00E38B81 /* OnboardSingleView.swift in Sources */,
 				AEAE8F481CD681A5009819D0 /* DetailTableViewController.swift in Sources */,
+				AE6DF0721CF2245B0067EE98 /* CustomDetailCell.swift in Sources */,
 				AEEB0A7A1CEEA69A00660DF4 /* AddNewView.swift in Sources */,
 				AEF0927A1CAC73AD005C3DEF /* PlacesView.swift in Sources */,
 				AE88AA511CCC0A8200628080 /* MMDrawerController.m in Sources */,

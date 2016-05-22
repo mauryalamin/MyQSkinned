@@ -33,6 +33,9 @@
             <string>OpenSans</string>
             <string>OpenSans</string>
             <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+            <string>OpenSans</string>
         </mutableArray>
         <mutableArray key="TitilliumWeb-Light.ttf">
             <string>TitilliumWeb-Light</string>
@@ -435,26 +438,67 @@
         <scene sceneID="5VO-vL-iVQ">
             <objects>
                 <tableViewController storyboardIdentifier="AccountView" id="zXN-PY-tbW" customClass="AccountView" customModule="MyQSkinned" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="sZz-yj-doz">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="52" sectionHeaderHeight="18" sectionFooterHeight="18" id="sZz-yj-doz">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AccountCell" id="dpp-9K-uCN">
-                                <rect key="frame" x="0.0" y="113.5" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AccountCell" id="dpp-9K-uCN" customClass="CustomDetailCell" customModule="MyQSkinned" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="113.5" width="600" height="52"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dpp-9K-uCN" id="Dpj-CE-x9z">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="51.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVQ-G7-Vlh">
+                                            <rect key="frame" x="16" y="5" width="436" height="26"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="436" id="Zle-1z-7nn"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="19"/>
+                                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vEo-HL-ul5">
+                                            <rect key="frame" x="16" y="29" width="436" height="16.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="436" id="yS0-G8-So1"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
+                                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="vEo-HL-ul5" firstAttribute="leading" secondItem="NVQ-G7-Vlh" secondAttribute="leading" id="Msh-3r-jFR"/>
+                                        <constraint firstItem="NVQ-G7-Vlh" firstAttribute="leading" secondItem="Dpj-CE-x9z" secondAttribute="leadingMargin" constant="8" id="PVl-oF-6vl"/>
+                                        <constraint firstItem="NVQ-G7-Vlh" firstAttribute="top" secondItem="Dpj-CE-x9z" secondAttribute="top" constant="5" id="SdU-7a-Vu5"/>
+                                        <constraint firstItem="vEo-HL-ul5" firstAttribute="top" secondItem="NVQ-G7-Vlh" secondAttribute="bottom" constant="-2" id="s13-lu-QeS"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="detailLabel" destination="vEo-HL-ul5" id="TPL-v9-wEj"/>
+                                    <outlet property="label" destination="NVQ-G7-Vlh" id="APU-zF-JDH"/>
+                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EntryCell" id="0Nl-P5-p63">
-                                <rect key="frame" x="0.0" y="157.5" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EntryCell" id="0Nl-P5-p63" customClass="CustomTableCell" customModule="MyQSkinned" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="165.5" width="600" height="52"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0Nl-P5-p63" id="iqZ-hu-wUh">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="51.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5A-If-f3G">
+                                            <rect key="frame" x="15" y="13" width="436" height="26"/>
+                                            <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="19"/>
+                                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="label" destination="l5A-If-f3G" id="Kwn-f5-AUQ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
