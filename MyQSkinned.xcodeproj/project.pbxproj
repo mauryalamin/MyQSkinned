@@ -12,14 +12,14 @@
 		AE0F11381CED12F20052568D /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0F11371CED12F20052568D /* UserData.swift */; };
 		AE0F113A1CED1C020052568D /* Hub.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0F11391CED1C020052568D /* Hub.swift */; };
 		AE0F113D1CED1C390052568D /* Accessory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0F113C1CED1C390052568D /* Accessory.swift */; };
-		AE32DDF91CB9BA280063E92F /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE32DDF81CB9BA280063E92F /* Account.swift */; };
 		AE32DDFB1CB9BA490063E92F /* Rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE32DDFA1CB9BA480063E92F /* Rules.swift */; };
 		AE32DDFD1CB9BA680063E92F /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE32DDFC1CB9BA680063E92F /* History.swift */; };
-		AE32DDFF1CB9BA770063E92F /* Help.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE32DDFE1CB9BA770063E92F /* Help.swift */; };
 		AE5721EA1CA6FC360081AD35 /* CreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5721E91CA6FC360081AD35 /* CreateAccount.swift */; };
 		AE5721EC1CA6FC4F0081AD35 /* VerifyAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5721EB1CA6FC4F0081AD35 /* VerifyAccount.swift */; };
 		AE59E1421CD1667800EA98EA /* ManagePlacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE59E1411CD1667800EA98EA /* ManagePlacesTableViewController.swift */; };
 		AE59E1461CD16DED00EA98EA /* ManagePlacesSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE59E1451CD16DED00EA98EA /* ManagePlacesSection.swift */; };
+		AE6DF06E1CF210D80067EE98 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6DF06D1CF210D80067EE98 /* HelpView.swift */; };
+		AE6DF0701CF21C9E0067EE98 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6DF06F1CF21C9E0067EE98 /* AccountView.swift */; };
 		AE88AA501CCC0A8200628080 /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AE88AA481CCC0A8200628080 /* MMDrawerBarButtonItem.m */; };
 		AE88AA511CCC0A8200628080 /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE88AA4A1CCC0A8200628080 /* MMDrawerController.m */; };
 		AE88AA521CCC0A8200628080 /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = AE88AA4D1CCC0A8200628080 /* MMDrawerVisualState.m */; };
@@ -82,14 +82,14 @@
 		AE0F11371CED12F20052568D /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		AE0F11391CED1C020052568D /* Hub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hub.swift; sourceTree = "<group>"; };
 		AE0F113C1CED1C390052568D /* Accessory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Accessory.swift; sourceTree = "<group>"; };
-		AE32DDF81CB9BA280063E92F /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		AE32DDFA1CB9BA480063E92F /* Rules.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rules.swift; sourceTree = "<group>"; };
 		AE32DDFC1CB9BA680063E92F /* History.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
-		AE32DDFE1CB9BA770063E92F /* Help.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Help.swift; sourceTree = "<group>"; };
 		AE5721E91CA6FC360081AD35 /* CreateAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccount.swift; sourceTree = "<group>"; };
 		AE5721EB1CA6FC4F0081AD35 /* VerifyAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyAccount.swift; sourceTree = "<group>"; };
 		AE59E1411CD1667800EA98EA /* ManagePlacesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagePlacesTableViewController.swift; sourceTree = "<group>"; };
 		AE59E1451CD16DED00EA98EA /* ManagePlacesSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagePlacesSection.swift; sourceTree = "<group>"; };
+		AE6DF06D1CF210D80067EE98 /* HelpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
+		AE6DF06F1CF21C9E0067EE98 /* AccountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		AE88AA461CCC0A8200628080 /* MyQSkinned-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyQSkinned-Bridging-Header.h"; sourceTree = "<group>"; };
 		AE88AA471CCC0A8200628080 /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
 		AE88AA481CCC0A8200628080 /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
@@ -242,15 +242,15 @@
 				AEF092791CAC73AD005C3DEF /* PlacesView.swift */,
 				AE59E1411CD1667800EA98EA /* ManagePlacesTableViewController.swift */,
 				AEAE8F471CD681A5009819D0 /* DetailTableViewController.swift */,
-				AE32DDF81CB9BA280063E92F /* Account.swift */,
 				AE32DDFA1CB9BA480063E92F /* Rules.swift */,
 				AE32DDFC1CB9BA680063E92F /* History.swift */,
-				AE32DDFE1CB9BA770063E92F /* Help.swift */,
 				AE5721E91CA6FC360081AD35 /* CreateAccount.swift */,
 				AE5721EB1CA6FC4F0081AD35 /* VerifyAccount.swift */,
 				AE0373871CA8638600E38B81 /* OnboardView.swift */,
 				AE0373851CA8635E00E38B81 /* OnboardSingleView.swift */,
 				AEEB0A791CEEA69A00660DF4 /* AddNewView.swift */,
+				AE6DF06F1CF21C9E0067EE98 /* AccountView.swift */,
+				AE6DF06D1CF210D80067EE98 /* HelpView.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -450,23 +450,23 @@
 				AE0F11381CED12F20052568D /* UserData.swift in Sources */,
 				AEF0927C1CAC7446005C3DEF /* DeviceControl.swift in Sources */,
 				AE0F113D1CED1C390052568D /* Accessory.swift in Sources */,
-				AE32DDF91CB9BA280063E92F /* Account.swift in Sources */,
 				AEEB0A781CEE15BC00660DF4 /* AddNewDevice.swift in Sources */,
 				AE5721EA1CA6FC360081AD35 /* CreateAccount.swift in Sources */,
 				AE98DD481C95A5BA0000AC40 /* UIImageView.swift in Sources */,
 				AE5721EC1CA6FC4F0081AD35 /* VerifyAccount.swift in Sources */,
 				AE59E1461CD16DED00EA98EA /* ManagePlacesSection.swift in Sources */,
+				AE6DF06E1CF210D80067EE98 /* HelpView.swift in Sources */,
 				AE88AA531CCC0A8200628080 /* UIViewController+MMDrawerController.m in Sources */,
 				AED9500A1CD3CC0E004FFB16 /* CustomTableCell.swift in Sources */,
 				AE0373861CA8635E00E38B81 /* OnboardSingleView.swift in Sources */,
 				AEAE8F481CD681A5009819D0 /* DetailTableViewController.swift in Sources */,
 				AEEB0A7A1CEEA69A00660DF4 /* AddNewView.swift in Sources */,
 				AEF0927A1CAC73AD005C3DEF /* PlacesView.swift in Sources */,
-				AE32DDFF1CB9BA770063E92F /* Help.swift in Sources */,
 				AE88AA511CCC0A8200628080 /* MMDrawerController.m in Sources */,
 				AE32DDFD1CB9BA680063E92F /* History.swift in Sources */,
 				AE98DD281C95A50D0000AC40 /* AppDelegate.swift in Sources */,
 				AE88AA501CCC0A8200628080 /* MMDrawerBarButtonItem.m in Sources */,
+				AE6DF0701CF21C9E0067EE98 /* AccountView.swift in Sources */,
 				AE98DD851C95ED180000AC40 /* Launch.swift in Sources */,
 				AE59E1421CD1667800EA98EA /* ManagePlacesTableViewController.swift in Sources */,
 				AE32DDFB1CB9BA490063E92F /* Rules.swift in Sources */,

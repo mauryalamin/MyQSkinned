@@ -1,60 +1,91 @@
 //
-//  Account.swift
+//  AccountView.swift
 //  MyQSkinned
 //
-//  Created by Maury Alamin on 4/9/16.
+//  Created by Maury Alamin on 5/22/16.
 //  Copyright © 2016 Alamin. All rights reserved.
 //
 
 import UIKit
 
-class Account: UIViewController {
+class AccountView: UITableViewController {
     
     let screenSize: CGRect = UIScreen.mainScreen().bounds
-    
-    //TO DELETE
-    // private let addNewDevice = AddNewDevice()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        
-        //TO DELETE
-        /*
-        view.addSubview(addNewDevice)
-        addNewDevice.addTarget(self, action: #selector(addTapped(_:)), forControlEvents: UIControlEvents.TouchUpInside)
-        NSLayoutConstraint.activateConstraints([
-            addNewDevice.widthAnchor.constraintEqualToAnchor(view.widthAnchor, multiplier: 0.7),
-            addNewDevice.centerXAnchor.constraintEqualToAnchor(view.centerXAnchor),
-            addNewDevice.topAnchor.constraintEqualToAnchor(view.topAnchor),
-            
-        ])
-         */
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-    
-    //TO DELETE
-    /*
-    func addTapped(sender: UIControl) {
-        
-        print("Tapped")
-        
-    }
-     */
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+    // MARK: - Table view data source
+
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        
+        return 1
+    }
+
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return 0
+    }
+
+    /*
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+
+        // Configure the cell...
+
+        return cell
+    }
+    */
+
+    /*
+    // Override to support conditional editing of the table view.
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        // Return false if you do not want the specified item to be editable.
+        return true
+    }
+    */
+
+    /*
+    // Override to support editing the table view.
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            // Delete the row from the data source
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        } else if editingStyle == .Insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }    
+    }
+    */
+
+    /*
+    // Override to support rearranging the table view.
+    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
+
+    }
+    */
+
+    /*
+    // Override to support conditional rearranging of the table view.
+    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        // Return false if you do not want the item to be re-orderable.
+        return true
+    }
+    */
     
     override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        // self.navigationController?.navigationBarHidden = true
-        
-        // Set Nav Bar Invisible
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.translucent = true
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "nav-bar-bkgd"), forBarMetrics: UIBarMetrics.Default)
         
         self.navigationController?.navigationBar.barStyle = UIBarStyle.Black
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
@@ -71,9 +102,6 @@ class Account: UIViewController {
             // Nav Bar Button Item custom font
             self.navigationItem.rightBarButtonItem!.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "TitilliumWeb-Light", size: 20)!], forState: .Normal)
         }
-        
-        
-
     }
     
     @IBAction func menuButton(sender: UIBarButtonItem) {
@@ -83,19 +111,6 @@ class Account: UIViewController {
     }
     
     @IBAction func logoutTapped(sender: UIBarButtonItem) {
-        
-        // Sets flag to FALSE for system to remember that user is logged in and iOS saves state
-        NSUserDefaults.standardUserDefaults().setBool(false, forKey: "isUserLoggedIn")
-        NSUserDefaults.standardUserDefaults().synchronize()
-        
-        let launchViewController = self.storyboard?.instantiateViewControllerWithIdentifier("Launch") as! Launch
-        let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        
-        appDelegate.window?.rootViewController = launchViewController
-        
-    }
-    
-    func logout() {
         
         // Sets flag to FALSE for system to remember that user is logged in and iOS saves state
         NSUserDefaults.standardUserDefaults().setBool(false, forKey: "isUserLoggedIn")

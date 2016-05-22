@@ -10,6 +10,7 @@ import UIKit
 
 class Menu: UIViewController {
     
+    // MARK: - Storyboard Outlets
     @IBOutlet weak var placesButton: MenuItem!
     @IBOutlet weak var manageButton: MenuItem!
     @IBOutlet weak var accountButton: MenuItem!
@@ -28,23 +29,8 @@ class Menu: UIViewController {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBarHidden = true
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
+            
+    // MARK: - Button Actions
     @IBAction func buttonTouched(sender: MenuItem) {
         
         placesButton.buttonUnselected()
@@ -55,7 +41,6 @@ class Menu: UIViewController {
         helpButton.buttonUnselected()
         
         sender.buttonSelected()
-        // print("\(sender.label.text!)")
         
         switch (sender.label.text!) {
         case "Places":
@@ -73,7 +58,7 @@ class Menu: UIViewController {
             appDelegate.centerContainer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil)
             break
         case "Account":
-            let accountView = self.storyboard?.instantiateViewControllerWithIdentifier("Account") as! Account
+            let accountView = self.storyboard?.instantiateViewControllerWithIdentifier("AccountView") as! AccountView
             let accountNavController = UINavigationController(rootViewController: accountView)
             let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
             appDelegate.centerContainer!.centerViewController = accountNavController
@@ -94,7 +79,7 @@ class Menu: UIViewController {
             appDelegate.centerContainer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil)
             break
         case "Help":
-            let helpView = self.storyboard?.instantiateViewControllerWithIdentifier("Help") as! Help
+            let helpView = self.storyboard?.instantiateViewControllerWithIdentifier("HelpView") as! HelpView
             let helpNavController = UINavigationController(rootViewController: helpView)
             let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
             appDelegate.centerContainer!.centerViewController = helpNavController
@@ -104,8 +89,12 @@ class Menu: UIViewController {
             print("Nothing was tapped")
         }
         
-        
-        
+    }
+    
+    // MARK: - House Cleaning
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
 }
