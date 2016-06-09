@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DeviceControl: UIView {
+class DeviceControl: UIControl {
     
     private let deviceImageView = UIImageView.configuredImageView()
     

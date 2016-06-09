@@ -13,6 +13,6 @@ class Accessory: NSObject {
     var name: String?
     var type: String?
     var icon: String?
-    // var state: State
+    // var iconAnimated: String?
 
 }

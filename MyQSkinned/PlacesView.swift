@@ -54,11 +54,8 @@ class PlacesView: UIViewController {
             var horizontalString = "H:|"
             
             for key in deviceViews.keys {
-                
                 let stringPortion = "[\(key)(==scrollView)]"
-                
                 horizontalString += stringPortion
-                
             }
             
             horizontalString += "|"
@@ -112,10 +109,8 @@ class PlacesView: UIViewController {
     }
     
     @IBAction func menuButton(sender: UIBarButtonItem) {
-        
         let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         appDelegate.centerContainer!.toggleDrawerSide(MMDrawerSide.Left, animated: true, completion: nil)
-        
     }
     
     func addTapped(sender: UIControl) {
@@ -133,12 +128,17 @@ class PlacesView: UIViewController {
         deviceControl.deviceText = deviceName
         deviceControl.deviceIconImage = UIImage(named: deviceIcon)
         deviceControl.statusText = "OPEN FOR 13 MINUTES"
-        
+        deviceControl.addTarget(self, action: #selector(PlacesView.controlTapped(_:)), forControlEvents: .TouchUpInside)
         devicesArray.append(deviceControl)
         
         scrollView.addSubview(deviceControl)
         
         return deviceControl
+    }
+    
+    func controlTapped(sender: DeviceControl!) {
+        
+        print("\(sender.deviceText!) Tapped")
         
     }
     
