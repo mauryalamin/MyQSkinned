@@ -92,7 +92,6 @@ class DeviceControl: UIControl {
             statusLabel.heightAnchor.constraintEqualToConstant(16),
             statusLabel.centerXAnchor.constraintEqualToAnchor(deviceImageView.centerXAnchor),
             statusLabel.topAnchor.constraintEqualToAnchor(deviceImageView.bottomAnchor),
-            
         ])
     }
 

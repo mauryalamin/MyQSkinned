@@ -132,7 +132,6 @@ class PlacesView: UIViewController {
         devicesArray.append(deviceControl)
         
         scrollView.addSubview(deviceControl)
-        
         return deviceControl
     }
     
