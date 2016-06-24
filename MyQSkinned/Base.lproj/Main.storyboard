@@ -62,7 +62,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="places-wallpaper-sq" translatesAutoresizingMaskIntoConstraints="NO" id="z8l-fd-P5J">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="places-new" translatesAutoresizingMaskIntoConstraints="NO" id="z8l-fd-P5J">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ie-xi-ZDH">
@@ -1508,7 +1508,7 @@
         <image name="myq-logo-ko" width="64" height="34"/>
         <image name="onboard1" width="320" height="568"/>
         <image name="place-icon" width="26" height="26"/>
-        <image name="places-wallpaper-sq" width="470" height="568"/>
+        <image name="places-new" width="568" height="567"/>
         <image name="rules-icon" width="26" height="26"/>
     </resources>
 </document>
